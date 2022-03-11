@@ -1,5 +1,5 @@
 # Learning-programming
 
-Folder "SQL w Mgnieniu Oka' jest to nauka SQL i prezentowanie cwiczen z ksiazki  oraz robienie zadan pod koniec kazdego rozdzialu.
+In the "SQL w Mgnieniu Oka" you can find learning of SQL in presented exercises in book and done tasks from the end of each chapter.
 
-In "SQL w Mgnieniu Oka" you can find learning of SQL ie exercises from book and task from the en of each chapter.
+Folder "SQL w Mgnieniu Oka' jest to nauka SQL i prezentowanie cwiczen z ksiazki  oraz robienie zadan pod koniec kazdego rozdzialu.
