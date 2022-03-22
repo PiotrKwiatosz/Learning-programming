@@ -1,4 +1,4 @@
-# Zmoddyfikowana instrukcja z zad.3 tak aby zwracala laczna liczbe zamowien kazdego produktu
+# Zmoddyfikowana instrukcja z zad.3 tak aby zwracala laczna liczbe zamowien kazdego produktu (zamiast numerow zamowien)
 
 SELECT prod_nazwa, COUNT(zam_numer) AS licza_zamowien
 FROM Produkty
