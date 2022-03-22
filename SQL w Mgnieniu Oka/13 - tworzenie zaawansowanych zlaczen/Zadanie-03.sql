@@ -1,4 +1,5 @@
-# Zlaczenie OUTER JOIN aby zlaczyc Produkty i ElementyZamowienia, instrukcja ma zwracac posortowana liste produktow i numerow zamowien
+# Zlaczenie OUTER JOIN aby zlaczyc Produkty i ElementyZamowienia
+# Instrukcja ma zwracac posortowana liste produktow i numerow zamowien
 
 SELECT prod_nazwa, zam_numer
 FROM Produkty
