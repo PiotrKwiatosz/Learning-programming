@@ -10,9 +10,9 @@ INSERT INTO Klienci(kl_id,
         kl_kraj,
         kl_email)
 VALUES('1000000042',
-	'SQLowanie'
-    'Sasankowa 6'
-    'Katowice'
+	'SQLowanie',
+    'Sasankowa 6',
+    'Katowice',
     'SLK',
     '48-330',
     'Polska',
