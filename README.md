@@ -1,6 +1,6 @@
 # My learning path
 
-1.  SQL course from the book: 'Sams Teach Yourself SQL in 10 Minutes' Ben Fort -
+1.  SQL course from the book: 'Sams Teach Yourself SQL in 10 Minutes' Ben Fort
     In the folder 'SQL W Mgnieniu Oka' there are done exercises from the book and completed task from the end of each chapter
 2.  Start the 'Cytotoxic Drugs Department' project
     - general outlines of the IT system for using the chemiotherapy service in the hospital
