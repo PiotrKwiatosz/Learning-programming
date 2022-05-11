@@ -8,8 +8,8 @@ print("Witaj! Jestem kalkulatorem napiwku, ktory oblicza jaki napiwek powinienes
 rachunek = input("Prosze podaj ogolna sume z rachunku wystawionego przez restauracje: ")
 rachunek = int(rachunek)
 
-napiwek_1 = rachunek * 0.15
-napiwek_2 = rachunek * 0.25
+napiwek_1 = int(rachunek * 0.15)
+napiwek_2 = int(rachunek * 0.25)
 
 print("Oto napiwki jakie powinienes dac, wybor nalezy do Ciebie: ")
 print(napiwek_1)
