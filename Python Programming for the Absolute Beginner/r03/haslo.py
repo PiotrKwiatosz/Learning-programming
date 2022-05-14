@@ -8,6 +8,7 @@ password = input("wprowadz haslo: ")
 
 if password == "sekret":
     print("Dostep zostal udzielony")
-    print("\nWitaj przyjacielu!")
+else:
+    print("Odmowa dostepu") 
 
 input("\n\nAby zakonczyc program, nacisnij ENTER")
