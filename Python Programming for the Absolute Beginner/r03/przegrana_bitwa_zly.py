@@ -1,5 +1,6 @@
 # Przegrana bitwa
 # Demonstruje przerazajaca petle nieskonczona
+# (petla nieskonczona)
 
 print("Twoj samotny bohater jest otoczony przez ogromna armie trolli.")
 print("Wielka masa isch zgnilozielonych cial rozciaga sie az po horyzont.")
