@@ -1,5 +1,5 @@
 --------------------------------------------------
--- Skrypt tworzenia tabel dla bazy danych MySQL.
+## Skrypt tworzenia tabel dla bazy danych MySQL.
 --------------------------------------------------
 
 
