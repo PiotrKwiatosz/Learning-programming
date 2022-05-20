@@ -7,7 +7,7 @@ while True:
     # zakoncz petle jesli wartosc zmiennej count jest wieksza niz 10
     if count > 10:
         break
-# poomin liczbe 5
+    # pomin liczbe 5
     if count == 5:
         continue
     print(count)
