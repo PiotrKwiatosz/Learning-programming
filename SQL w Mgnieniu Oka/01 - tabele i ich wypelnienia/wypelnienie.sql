@@ -1,5 +1,5 @@
 ----------------------------------------------------
--- Skrypt wypełniania tabel dla bazy danych MySQL.
+## Skrypt wypełniania tabel dla bazy danych MySQL.
 ----------------------------------------------------
 
 -----------------------------
