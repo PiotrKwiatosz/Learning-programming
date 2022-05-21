@@ -1,9 +1,6 @@
 # Ekskluzywna siec
 # Demonstruje operatory logiczne i warunki zlozone
 
-from re import T
-
-
 print("\tEkskluzywna Siec Komputerowa")
 print("\t   Tylko dla czlonkow!\n")
 
