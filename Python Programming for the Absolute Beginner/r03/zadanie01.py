@@ -12,21 +12,36 @@ cookie = random.randint(1, 5)
 
 if cookie == 1:
     # przepowiednia 1
-    print("\tNie stawiaj czoła rzeczywistości. Odbij się od niej.")
+    print( \
+        """"
+        Nie stawiaj czoła rzeczywistości. Odbij się od niej.
+        """)
 
 elif cookie == 2:
     # przepowiednia 2
-    print("\tKto urodził się kurą, orłem nie umrze.")
+    print( \
+        """
+        Kto urodził się kurą, orłem nie umrze.
+        """)
 
 elif cookie == 3:
     # przepowiednia 3
-    print("\tSzczęście, którego szukasz, jest w drugim ciasteczku.")
+    print( \
+        """
+        Szczęście, którego szukasz, jest w drugim ciasteczku.
+        """)
 
 elif cookie == 4:
-    print("\tGdy widzisz mędrca, myśl o tym, by mu dorównać. Gdy widzisz tego, komu brak rozsądku, zastanów się nad samym sobą.")
+    print( \
+        """
+        Gdy widzisz mędrca, myśl o tym, by mu dorównać. Gdy widzisz tego, komu brak rozsądku, zastanów się nad samym sobą.
+        """)
 
 elif cookie == 5:
-    print("\tNie oglądaj się za siebie.")
+    print( \
+        """
+        Nie oglądaj się za siebie.
+        """)
 
 else:
     print("\tUgryz ciasteczko, bo ucieknie!")
