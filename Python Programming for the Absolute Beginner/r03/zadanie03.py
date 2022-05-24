@@ -15,7 +15,7 @@ guess = int(input("Ta liczba to: "))
 tries = 10
 
 # petla zgadywania
-while guess != the_number:
+while tries > 0:
     if guess > the_number:
         print("Za duza...")
     elif guess < the_number:
@@ -23,7 +23,8 @@ while guess != the_number:
     elif guess == the_number:
         print("Odgadles! Ta liczba to:", the_number)
         print("Do osiagniecia sukcesu potrzebowales tylko", tries, "z 10 prob!\n")
-
+        break
+    
     guess = int(input("Ta liczba to: "))
     tries -= 1
 
