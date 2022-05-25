@@ -20,16 +20,20 @@ while tries > 0:
         print("Za duza...")
     elif guess < the_number:
         print("Za mala...")
-    elif guess == the_number:
-        print("Odgadles! Ta liczba to:", the_number)
-        print("Do osiagniecia sukcesu potrzebowales tylko", tries, "z 10 prob!\n")
-        break
     
     guess = int(input("Ta liczba to: "))
     tries -= 1
 
-    if tries == 0:
-        print("KONIEC! Nie udalo Ci sie zgadnac w 10 probach...")
+    if guess == the_number:
+        print("Odgadles! Ta liczba to:", the_number)
+        print("Do osiagniecia sukcesu potrzebowales tylko", 10 - tries , "z 10 prob!\n")
+        break
+
+    elif tries == 0:
+        print("\nKONIEC! Nie udalo Ci sie zgadnac w 10 probach...")
+        print("\nUciekła i nie udało Ci się jej złapać...")
+        print("\n\tA była to: ->", the_number, "<- liczba...")
+        print("\nPostaraj się bardziej!!!")
         break
 
 input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
