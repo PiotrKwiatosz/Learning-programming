@@ -1,6 +1,7 @@
 # Zmodyfikowany program 'Jaka to liczba' tak, aby gracz dysponowal ograniczona 
 # liczba prob odgadniecia wybranej przez komputer liczby.
-# Gdy graczowi nie uda sie odgadnac tej liczby w wyznaczonej liczbie prob, program powinien wyswietlic odpowiedni komunikat z reprymenda.
+# Gdy graczowi nie uda sie odgadnac tej liczby w wyznaczonej liczbie prob, program powinien wyswietlic
+# odpowiedni komunikat z reprymenda.
 
 import random
 
