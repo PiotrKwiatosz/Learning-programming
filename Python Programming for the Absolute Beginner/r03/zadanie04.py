@@ -4,48 +4,34 @@
 # odgadnąć. Zanim rozpoczniesz tworzenie algorytmu, pomyśl, w jaki sposób
 # sam byś zgadywał. Jeśli wszystko się uda, spróbuj napisać kod gry.
 
+import random
+
 print("Witaj graczu! Pobawimy sie teraz w znana gre 'Jaka to liczba'")
 print("Teraz zamienimy sie rolami i to Ty bedziesz wymyslal liczbe a ja bede ja odgadywal")
 print("Wiec wymysl sobie teraz jakas liczbe z przedzialu od 1 do 100")
 print("Ale mam na to tylko 10 prob")
 
-import random
-
+y = input("\nPomyśl o jakiejś liczbie (zapisz liczbę w pamięci): ")
 number = random.randint(1,100)
-guess = print("Czy ta liczba to: ", number, " ?")
 tries = 10
 
-answer = ""
-while not answer:
-    answer = input("Tak?")
-     
-while not answer:
-    answer = input("Nie?")
-
-
-while tries > 0:
-    while number != guess:
-        print("Czy ta liczba to: ", number, "?")
-        if answer == "Nie":
-            print("Za duza?")
-            input("")
-            if answer == "Tak":
-                print("Czy ta liczba to: ", random.randint(1,100) ,"?")
-            elif answer == "Nie":
-                print("Za mala?")
-                input("")
-                if answer == "Tak":
-                    print("Czy ta liczba to: ", random.randint(1,100), " ?")
-        elif answer == "Tak":
-            print("Udalo mi sie! Twoja liczba to: ", number, "Super bylo!")
-            print("Aby ja odgadnac porzebowalem ", 10 - tries, " prob!")
+while number != y:
+    number = random.randint(1,100)
+    tries > 0
+    if number == y:
+            print("Twoja liczba to", number, "Udalo mi sie!")
             break
-        else:
-            print("Nie rozumiem Cie...")
-            break
+    print("Czy miałeś na myśli liczbę", number, "?")
 
-    guess = print("Czy ta liczba to: ", number, " ?")
     tries -= 1
+
+    reply = input("tak/nie: ")
+    if reply == "tak":
+        print("widzisz? Udalo mi sie! :D")
+        print("Super!")
+        print("Aby ja odgadnac porzebowalem ", 10 - tries, " prob!")
+        print("")
+        break
 
 if tries == 0:
     print("\nKONIEC! Nie udalo mi sie jej zgadnac w 10 probach...")
