@@ -28,12 +28,14 @@ while tries > 0:
         print("Czy ta liczba to: ", number, "?")
         if answer == "Nie":
             print("Za duza?")
+            input("")
             if answer == "Tak":
-                print("Czy ta liczba to: ", number ,"?")
+                print("Czy ta liczba to: ", random.randint(1,100) ,"?")
             elif answer == "Nie":
                 print("Za mala?")
+                input("")
                 if answer == "Tak":
-                    print("Czy ta liczba to: ", number, " ?")
+                    print("Czy ta liczba to: ", random.randint(1,100), " ?")
         elif answer == "Tak":
             print("Udalo mi sie! Twoja liczba to: ", number, "Super bylo!")
             print("Aby ja odgadnac porzebowalem ", 10 - tries, " prob!")
@@ -42,7 +44,7 @@ while tries > 0:
             print("Nie rozumiem Cie...")
             break
 
-   # guess = print("Czy ta liczba to: ", number, " ?")
+    guess = print("Czy ta liczba to: ", number, " ?")
     tries -= 1
 
 if tries == 0:
