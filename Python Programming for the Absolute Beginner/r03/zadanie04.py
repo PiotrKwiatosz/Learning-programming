@@ -11,33 +11,34 @@ print("Teraz zamienimy sie rolami i to Ty bedziesz wymyslal liczbe a ja bede ja 
 print("Wiec wymysl sobie teraz jakas liczbe z przedzialu od 1 do 100")
 print("Ale mam na to tylko 10 prob")
 
-y = input("\nPomyśl o jakiejś liczbie (zapisz liczbę w pamięci): ")
+guess = input("\nPomyśl o jakiejś liczbie (zapisz liczbę w pamięci): ")
 number = random.randint(1,100)
 tries = 10
 
-while number != y:
+while number != guess:
     number = random.randint(1,100)
     tries > 0
-    if number == y:
+    if number == guess:
             print("Twoja liczba to", number, "Udalo mi sie!")
             break
     print("Czy miałeś na myśli liczbę", number, "?")
 
     tries -= 1
 
-    reply = input("tak/nie: ")
-    if reply == "tak":
+    reply = input("Tak?: ")
+    if reply == "Tak":
         print("widzisz? Udalo mi sie! :D")
         print("Super!")
         print("Aby ja odgadnac porzebowalem ", 10 - tries, " prob!")
         print("")
         break
 
-if tries == 0:
-    print("\nKONIEC! Nie udalo mi sie jej zgadnac w 10 probach...")
-    print("\nUciekla i nie zlapalem jej...")
-    print("\n\tA byla to: ->", number, "<- liczba...?")
-    print("\nMusze postrac sie bardziej :(")
+    if tries == 0:
+        print("\nKONIEC! Nie udalo mi sie jej zgadnac w 10 probach...")
+        print("\nUciekla i nie zlapalem jej...")
+        print("\n\tA byla to: ->", number, "<- liczba...?")
+        print("\nMusze postrac sie bardziej :(")
+        break
 
 input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
 
