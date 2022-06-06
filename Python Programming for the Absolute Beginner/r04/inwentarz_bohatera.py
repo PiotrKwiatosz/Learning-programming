@@ -6,7 +6,7 @@ inventory = ()
 
 # potraktuj krotke jako warunek
 if not inventory:
-    print("Masz puste rece. Nie posiadasz niczego.")
+    print("Masz puste rece. \nNie posiadasz niczego.")
 
 input("\nAby kontynuowac misje, nacisnij klawisz ENTER.")
 
