@@ -4,8 +4,7 @@
 print("Witaj, oto program ktory liczy za Ciebie, odkad dokad chcesz")
 print("Wprowadz liczbe poczatkowa i koncowa oraz separator co ile:")
 
-start = (input("\nPoczatek: "))
-start = int(start)
+start = int(input("\nPoczatek: "))
 finish = int(input("Koniec: "))
 separator = int(input("Co ile ma byc liczone: "))
 
