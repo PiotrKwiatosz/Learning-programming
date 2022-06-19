@@ -19,10 +19,15 @@ hint4 = ("Jak nielatwy to jaki?", "trudny")
 hint5 = ("Jak cos sie miesza to jakie sie staje? I jaki ktos moze byc?", "pomieszany")
 hint6 = ("Pytanie i ...?", "odpowiedz")
 
+<<<<<<< HEAD
 # zbior podpowiedzi
 HINTS = (hint1, hint2, hint3, hint4, hint5, hint6)
 
 # Odpowiedz tak czy nie
+=======
+HINTS = (hint1, hint2, hint3, hint4, hint5, hint6)
+
+>>>>>>> 47fd7956a4646be3336096c4cd8ebb08edd92689
 answer = ("tak" or "nie")
 
 # wybierz losowo jedno slowo z sekwencji
