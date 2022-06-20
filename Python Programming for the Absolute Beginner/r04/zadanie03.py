@@ -5,29 +5,28 @@
 # Gracz ma teraz mozliwosc zobaczenia podpowiedzi
 # Dodany system punktacji
 
-from calendar import c
 import random
 
 # utworz sekwencje slow do wyboru
-WORDS = ("python", "anagram", "piotrek", "trudny", "pomieszany", "odpowiedz")
+WORDS = ("python", 
+         "anagram", 
+         "piotrek", 
+         "trudny", 
+         "pomieszany", 
+         "odpowiedz")
 
-# podpowiedzi do slow
-hint1 = ("Jezyk programowania ktory jest na litere P",  "python")
-hint2 = ("Gram i ana-nas, jak to mozna zlaczyc?", "anagram")
-hint3 = ("Male zdrobnienie do imienia wielkiego Apostola", "piotrek")
-hint4 = ("Jak nielatwy to jaki?", "trudny")
-hint5 = ("Jak cos sie miesza to jakie sie staje? I jaki ktos moze byc?", "pomieszany")
-hint6 = ("Pytanie i ...?", "odpowiedz")
+# sekwencja podpowiedzi do slow
+HINTS = ("Jezyk programowania ktory jest na litere P", 
+         "Gram i ana-nas, jak to mozna zlaczyc?", 
+         "Male zdrobnienie do imienia wielkiego Apostola", 
+         "Jak nielatwy to jaki?", 
+         "Jak cos sie miesza to jakie sie staje? I jaki ktos moze byc?", 
+         "Pytanie i ...?")
 
-<<<<<<< HEAD
-# zbior podpowiedzi
-HINTS = (hint1, hint2, hint3, hint4, hint5, hint6)
+# konkatecja czyli laczenie zbiorow
+WORDS = HINTS
 
 # Odpowiedz tak czy nie
-=======
-HINTS = (hint1, hint2, hint3, hint4, hint5, hint6)
-
->>>>>>> 47fd7956a4646be3336096c4cd8ebb08edd92689
 answer = ("tak" or "nie")
 
 # wybierz losowo jedno slowo z sekwencji
@@ -64,10 +63,15 @@ while guess != correct and guess != "":
 if guess == correct:
     print("Zgadza sie! Zgadles!\n")
 
-while guess != correct:
+if  guess != correct:
     print("Czy chcesz jakas podpowiedz do tego trudnego slowa?")
-    if answer == input("tak"):
-        print("Podpowiedz: ", HINTS)
+    input("Tak czy nie?")
+    if answer.lower == "tak":
+        for word in  WORDS:
+            print("Podpowiedz :", hint)
+    else:
+        print("Nie ma takiego slowa")
+guess = input("\nTwoja odpowiedz: ")
 
 
 print("Dziekuje za udzial w grze.")
