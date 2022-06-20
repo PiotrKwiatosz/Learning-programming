@@ -2,7 +2,6 @@
 # Komputer wybiera losowo slowo a potem miesza w nim litery
 # Gracz powinien odgadnac pierwotne slowo
 
-from calendar import c
 import random
 
 # utworz sekwencje slow do wyboru
