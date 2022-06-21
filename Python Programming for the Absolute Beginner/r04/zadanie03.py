@@ -23,14 +23,14 @@ HINTS = ("Jezyk programowania ktory jest na litere P",
          "Jak cos sie miesza to jakie sie staje? I jaki ktos moze byc?", 
          "Pytanie i ...?")
 
-# konkatecja czyli laczenie zbiorow
-WORDS = HINTS
-
 # Odpowiedz tak czy nie
-answer = ("tak" or "nie")
+answer = ("tak")
 
 # wybierz losowo jedno slowo z sekwencji
 word = random.choice(WORDS)
+
+# konkatencja czyli laczenie zbiorow
+WORDS = HINTS
 
 # utworz zmienna, by pozniej uzyc jej do sprawdzenia, czy odpowiedz jest poprawna
 correct = word
@@ -58,20 +58,19 @@ print("Zgadnij, jakie to slowo:", jumble)
 guess = input("\nTwoja odpowiedz: ")
 while guess != correct and guess != "":
     print("Niestety, to nie to slowo.")
+    if  guess != correct:
+        print("Widac to trudne slowo")
+        input("Czy chcesz podpowiedz?")
+        if answer.lower == "tak":
+            for word in HINTS:
+                print("Podpowiedz: ", word(HINTS))
+    else:
+        print("Nie ma takiego slowa")
+
     guess = input("Twoja odpowiedz: ")
 
 if guess == correct:
     print("Zgadza sie! Zgadles!\n")
-
-if  guess != correct:
-    print("Czy chcesz jakas podpowiedz do tego trudnego slowa?")
-    input("Tak czy nie?")
-    if answer.lower == "tak":
-        for word in  WORDS:
-            print("Podpowiedz :", hint)
-    else:
-        print("Nie ma takiego slowa")
-guess = input("\nTwoja odpowiedz: ")
 
 
 print("Dziekuje za udzial w grze.")
