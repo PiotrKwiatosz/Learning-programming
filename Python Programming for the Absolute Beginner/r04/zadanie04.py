@@ -17,20 +17,19 @@ print("\nWybrane slowo ma tyle liter: ", len(word))
 
 answer = input("\nJakie to slowo?: ")
 
-print("Mozesz zadac pytanie czy jakas litera jest w tym slowie: ")
-
-for letter in word:
-    input()
-    if letter.lower() not in word:
-        print("Nie")
-    elif letter.lower() in word:
-        print("Tak")
-    else:
-        answer == 5
-        break
-
 if answer == word:
-    print("Tak! To to slowo! BRAWO!")     
-    
+    print("Tak! To to slowo! BRAWO!") 
+
+while answer != 5:
+    if answer != word:
+        print("Mozesz zadac pytanie czy jakas litera jest w tym slowie: ")
+        for letter in word:
+            input()
+            if letter.lower() not in word:
+                print("Nie")
+            else:
+                print("Tak")
+
+
 input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
 
