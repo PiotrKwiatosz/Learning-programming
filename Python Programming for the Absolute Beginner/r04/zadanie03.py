@@ -23,17 +23,16 @@ HINTS = ("Jezyk programowania ktory jest na litere P",
          "Jak cos sie miesza to jakie sie staje? I jaki ktos moze byc?", 
          "Pytanie i ...?")
 
-# Odpowiedz tak czy nie
-answer = ("tak")
-
 # wybierz losowo jedno slowo z sekwencji
-word = random.choice(WORDS)
-
-# konkatencja czyli laczenie zbiorow
-WORDS = HINTS
+index = random.randint(0,len(WORDS))
+word = WORDS[index]
+hint = HINTS[index]
 
 # utworz zmienna, by pozniej uzyc jej do sprawdzenia, czy odpowiedz jest poprawna
 correct = word
+
+# utworz zmienna aby podpowiedz byla podana tylko raz
+given_hint = False
 
 # utworz 'pomieszana' wersje slowa
 jumble = ""
@@ -56,14 +55,15 @@ print(
 print("Zgadnij, jakie to slowo:", jumble)
 
 guess = input("\nTwoja odpowiedz: ")
+
 while guess != correct and guess != "":
     print("Niestety, to nie to slowo.")
-    if  guess != correct:
+    if  given_hint == False:
         print("Widac to trudne slowo")
-        input("Czy chcesz podpowiedz?")
-        if answer.lower == "tak":
-            for word in HINTS:
-                print("Podpowiedz: ", word(HINTS))
+        want_hint = input("Czy chcesz podpowiedz?Tak lub nie: ")
+        if want_hint.lower() == "tak" or want_hint.lower() == "t":
+                print("Podpowiedz: ", hint)
+                given_hint = True
     else:
         print("Nie ma takiego slowa")
 
@@ -71,6 +71,11 @@ while guess != correct and guess != "":
 
 if guess == correct:
     print("Zgadza sie! Zgadles!\n")
+    if given_hint == False:
+        print("Zdobyles maksymalna ilosc punktow - 10!")
+    else:
+        print("Zdobyle 5 punktow z 10, bo skorzystales z podpowiedzi.")
+
 
 
 print("Dziekuje za udzial w grze.")
