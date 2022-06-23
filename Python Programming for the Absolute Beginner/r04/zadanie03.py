@@ -12,7 +12,7 @@ WORDS = ("python",
          "anagram", 
          "piotrek", 
          "trudny", 
-         "pomieszany", 
+         "pomieszane", 
          "odpowiedz")
 
 # sekwencja podpowiedzi do slow
@@ -52,20 +52,17 @@ print(
     !! W tej wersji dostepne sa juz podpowiedzi jesli utkniesz w martwym punkcie
     oraz system punktacji po zakonczeniu rozgrywki (najwiecej punktow bez podpowiedz) !!"""
 )
-print("Zgadnij, jakie to slowo:", jumble)
+print("\nZgadnij, jakie to slowo:", jumble)
 
 guess = input("\nTwoja odpowiedz: ")
 
 while guess != correct and guess != "":
     print("Niestety, to nie to slowo.")
     if  given_hint == False:
-        print("Widac to trudne slowo")
-        want_hint = input("Czy chcesz podpowiedz?Tak lub nie: ")
+        want_hint = input("Czy chcesz podpowiedz? Tak lub nie: ")
         if want_hint.lower() == "tak" or want_hint.lower() == "t":
                 print("Podpowiedz: ", hint)
                 given_hint = True
-    else:
-        print("Nie ma takiego slowa")
 
     guess = input("Twoja odpowiedz: ")
 
@@ -75,7 +72,6 @@ if guess == correct:
         print("Zdobyles maksymalna ilosc punktow - 10!")
     else:
         print("Zdobyle 5 punktow z 10, bo skorzystales z podpowiedzi.")
-
 
 
 print("Dziekuje za udzial w grze.")
