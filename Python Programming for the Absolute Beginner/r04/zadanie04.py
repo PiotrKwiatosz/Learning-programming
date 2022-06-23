@@ -8,6 +8,7 @@ import random
 WORDS = ("kosmita", "tygrys", "samolot", "pies")
 
 word = random.choice(WORDS)
+chances = 5
 
 print("Witaj! Zagramy w gre w ktorej musisz zgadnac ktore sobie wybralem z tych slow:")
 print("\n\t", WORDS)
@@ -15,20 +16,20 @@ print("\nPodpowiem Ci ile ma liter, ale masz tylko 5 szans. Zaczynajmy!")
 
 print("\nWybrane slowo ma tyle liter: ", len(word))
 
-answer = input("\nJakie to slowo?: ")
+while chances > 0:
+    letter_guess = input("Mozesz zadac pytanie czy jakas litera jest w tym slowie: ")
+    chances = chances - 1
+    if letter_guess in word:
+        print("Tak")
+    else:
+        print("Nie.") 
 
-if answer == word:
-    print("Tak! To to slowo! BRAWO!") 
+guess = input("\nJakie to slowo?: ")
 
-while answer != 5:
-    if answer != word:
-        print("Mozesz zadac pytanie czy jakas litera jest w tym slowie: ")
-        for letter in word:
-            input()
-            if letter.lower() not in word:
-                print("Nie")
-            else:
-                print("Tak")
+if guess.lower() == word:
+    print("Tak! To to slowo! BRAWO!")
+else:
+    print("Ah. Nie udalo Ci sie zgadnac. Ukryte slowo to: ", word)
 
 
 input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
