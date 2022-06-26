@@ -3,6 +3,9 @@
 
 # utworz krotke zawierajaca pewne elementy i wyswietl jej zawartosc
 # za pomoca petli
+from tkinter.tix import CheckList
+
+
 inventory = ("miecz",
              "zbroja",
              "tarcza",
