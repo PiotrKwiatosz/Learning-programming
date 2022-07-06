@@ -44,4 +44,4 @@ while choice != "0":
     else:
         print("Niestety,", choice, "nie jest prawidlowym wyborem.")
 
-    input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
+input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
