@@ -75,7 +75,7 @@ while choice != "O":
             health = score
             scores.append(health)
             scores.sort(reverse=True)
-            scores = scores[:strenght]
+            scores = scores[:30-strenght]
             
         # wybrana MADROSC
         elif choice == "3":
@@ -83,7 +83,7 @@ while choice != "O":
             wisdom = score
             scores.append(wisdom)
             scores.sort(reverse=True)
-            scores = scores[:health]
+            scores = scores[:30-(health+strenght)]
 
         # wybrana ZRECZNOSC
         elif choice == "4":
@@ -91,8 +91,11 @@ while choice != "O":
             skill = score
             scores.append(skill)
             scores.sort(reverse=True)
-            scores = scores[:wisdom]
+            scores = scores[:30-(wisdom+health+strenght]
 
+        elif scores == 0:
+            print("Niestety nie masz juz punktow")
+            break
 
         # nieznana opcja
         else:
@@ -100,7 +103,7 @@ while choice != "O":
             
     
     
-    input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
+input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
 
             
 
