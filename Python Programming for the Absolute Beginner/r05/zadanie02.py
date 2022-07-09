@@ -36,7 +36,7 @@ while choice != "O":
         print("Punkty przyznane na\n: ")
         print("WARTOSC\tPUNKTY")
         for entry in points:
-            point, name = entry
+            points, name = entry
             print(name, "\t", point)
 
     # dodaj punkty
@@ -51,11 +51,16 @@ while choice != "O":
             2 - ZDROWIE
             3 - MADROSC
             4 - ZRECZNOSC
+            5 - Usuwanie punktow
             """
         )
+    choice = None
+    while choice != "0":
 
         choice = input("Wybierasz: ")
         print()
+        used = []
+        points != 30
 
         # wyjdz
         if choice == "0":
@@ -63,37 +68,44 @@ while choice != "O":
 
         # wybrana SILA
         elif choice == "1":
-            score = int(input("Ile punktow chcesz przeznaczyc na SILE? :"))
-            strenght = score
-            scores.append(strenght)
-            scores.sort(reverse=True)
-            scores = scores[:30]
+            point = int(input("Ile punktow chcesz przeznaczyc na SILE? :"))
+            strenght = point
+            points.append(strenght)
+            points.sort(reverse=True)
+            points = points[:30]
+            used.append(points)    
         
          # wybrana ZDROWIE
         elif choice == "2":
-            score = int(input("Ile punktow chcesz przeznaczyc na ZDROWIE? :"))
-            health = score
-            scores.append(health)
-            scores.sort(reverse=True)
-            scores = scores[:30-strenght]
-            
+            point = int(input("Ile punktow chcesz przeznaczyc na ZDROWIE? :"))
+            health = point
+            points.append(health)
+            points.sort(reverse=True)
+            points = points[:30]
+            used.append(points)
+
         # wybrana MADROSC
         elif choice == "3":
-            score = int(input("Ile punktow chcesz przeznaczyc na MADROSC? :"))
-            wisdom = score
-            scores.append(wisdom)
-            scores.sort(reverse=True)
-            scores = scores[:30-(health+strenght)]
+            point = int(input("Ile punktow chcesz przeznaczyc na MADROSC? :"))
+            wisdom = point
+            points.append(wisdom)
+            points.sort(reverse=True)
+            points = points[:30]
+            used.append(points)
 
         # wybrana ZRECZNOSC
         elif choice == "4":
-            score = int(input("Ile punktow chcesz przeznaczyc na ZRECZNOSC? :"))
-            skill = score
-            scores.append(skill)
-            scores.sort(reverse=True)
-            scores = scores[:30-(wisdom+health+strenght]
+            point = int(input("Ile punktow chcesz przeznaczyc na ZRECZNOSC? :"))
+            skill = point
+            points.append(skill)
+            points.sort(reverse=True)
+            points = points[:30]
+            used.append(points)
 
-        elif scores == 0:
+        elif choice == "5":
+            print("Skad chcesz usunac punkty? :")
+
+        elif points == 0:
             print("Niestety nie masz juz punktow")
             break
 
@@ -101,7 +113,6 @@ while choice != "O":
         else:
             print("Niestety,", choice, "nie jest prawidlowa")
             
-    
     
 input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
 
