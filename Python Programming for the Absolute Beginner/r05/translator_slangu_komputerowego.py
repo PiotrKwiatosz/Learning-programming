@@ -1,9 +1,6 @@
 # Translator slangu komputerowego
 # Demonstruje uzywanie slownikow
 
-from tkinter import N
-
-
 geek = {"404": "ignorant, od uzywanego w sieci WWW komunikatu o bledzie 404\n - nie znaleziono strony.",
         "Googling": "googlowanie; wyszukiwanie w internecie informacji dotyczacych jakiejs osoby.",
         "Keyboard Plaque": "(skojarzone z kamieniem nazebnym) zanieczyszczenia nagromadzone w klawiaturze komputera.",
