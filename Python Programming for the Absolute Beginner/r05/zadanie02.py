@@ -17,7 +17,7 @@ print("""
     )
 
 attributes = {'strength':0, 'health':0, 'wisdom':0, 'dexterity':0}
-points = 30
+pool = 30
 choice = None
 spend = None
 
@@ -41,7 +41,7 @@ while choice != "0":
     print("\nTwoj charakter ma takie atrybuty:")
     for attribute, points in attributes.items():
         print("\t", attribute.title(), ":\t ", points)
-    print("\nJest ", points, "punktow w schowku.")
+    print("\nJest ", pool, "punktow w schowku.")
     print(choice_sentence)
     choice = input("Wybierasz: ")
     print()
@@ -53,10 +53,10 @@ while choice != "0":
     
     # dodanie punktow do atrybutu
     while choice == "1":
-        if points == 0:  # nie ma juz punktow
+        if pool == 0:  # nie ma juz punktow
             print("Przykro mi, ale nie masz punktow. Sprobuj dodac tu troche punktow")
             break
-        print("\nMasz ", points, " punktow w schowku")
+        print("\nMasz ", pool, " punktow w schowku")
         print("\nNa jaki atrybut chcesz je przyznac?")
         print(attribute_list)
         att_to_change = input("Atrybut do zmienienia: ")
@@ -65,6 +65,25 @@ while choice != "0":
             print("Na ktory atrybut chcesz dodac punkty?")
             print(attribute_list)
             att_to_change = input("Atrybut do zmiany: ")
+        else:
+            points = int(input("Ile punktow chcesz przyznac?: "))
+            while points > pool:
+                print("To jest za duzo punktow. Masz", pool, "do przyznania")
+                points = int(input("Ile punktow chcesz przyznac?: "))
+        attributes[att_to_change] += points
+        pool -= points
+        print("\nTwoje atrybuty")
+        for attribute, points in attributes.items():
+            print("\t", attribute.title(), ":  \t", points)
+        if pool == 0:
+            print("\nWydales juz wszystkie swoje punkty.")
+            choice = None
+            break
+        another_change = input("Chcesz zmienic inny atrybut? Tak czy Nie: ")
+        while another_change.title() != "Yes" and another_change.title() != "No":
+            
+
+
 
 
     if choice == "0":
