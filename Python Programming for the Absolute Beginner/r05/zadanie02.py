@@ -81,7 +81,22 @@ while choice != "0":
             break
         another_change = input("Chcesz zmienic inny atrybut? Tak czy Nie: ")
         while another_change.title() != "Yes" and another_change.title() != "No":
-            
+            print("Nieprawidlowy wybor.")
+            another_change = input("Chcesz zmienic inny atrybut? Tak czy Nie: ")
+        if another_change.title() == "No":
+            break
+
+        while choice == "2":    # dodaj punkty do schowka
+            if pool == 30:      # schowek jest pelny
+                print("\nPrzepraszam, nie masz zadnych punktow w swoich atrybutach."
+                "\nSprobuj najpierw dodac jakies punkty do swoich atrybutow.")
+                break
+            print("\nZ jakiego atrybutu chcesz zabrac punkty?")
+            for attribute, points in attribute.items():
+                print(attribute.title(), ":\t", points)
+            att_to_change = input("Wybor: ")
+            while (att_to_change != attribute_list):
+                print("\nTo jest nieprawidlowy wybor.")
 
 
 
