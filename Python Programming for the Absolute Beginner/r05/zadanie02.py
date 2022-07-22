@@ -16,24 +16,24 @@ print("""
 """
     )
 
-attributes = {'strength':0, 'health':0, 'wisdom':0, 'dexterity':0}
+attributes = {'sila':0, 'zdrowie':0, 'madrosc':0, 'zrecznosc':0}
 pool = 30
-choice = None
 spend = None
+choice = None
 
 choice_sentence = """
 \n\nWybierz co chcesz zrobic:
 
 0 - Zakoncz
-1 - Wyswietl na co przyznales punkty
-2 - Wybierz kategorie na co chcesz dodac punkty
+1 - Wydaj punkty na atrybut
+2 - Odloz punkty do schowka
 """
 
 attribute_list = """
-\tStrength
-\tHealth
-\tWisdom
-\tDexterity
+\tSila
+\tZdrowie
+\tMadrosc
+\tZrecznosc
 """
 
 while choice != "0":
@@ -58,13 +58,13 @@ while choice != "0":
         print("\nMasz ", pool, " punktow w schowku")
         print("\nNa jaki atrybut chcesz je przyznac?")
         print(attribute_list)
-        att_to_change = input("Atrybut do zmienienia: ")
-        while (att_to_change.title() != "Strength" and
-            att_to_change.title() != "Health" and
-            att_to_change.title() != "Wisdom" and
-            att_to_change.title() != "Dexterity"):
+        att_to_change = input("Atrybut do zmiany: ")
+        while (att_to_change.title() != "Sila" and
+            att_to_change.title() != "Zdrowie" and
+            att_to_change.title() != "Madrosc" and
+            att_to_change.title() != "Zrecznosc"):
             print("To jest nieprawidlowy wybor.")
-            print("Na ktory atrybut chcesz dodac punkty?")
+            print("Na jaki atrybut chcesz dodac punkty?")
             print(attribute_list)
             att_to_change = input("Atrybut do zmiany: ")
         else:
@@ -82,43 +82,44 @@ while choice != "0":
             choice = None
             break
         another_change = input("Chcesz zmienic inny atrybut? Tak czy Nie: ")
-        while another_change.title() != "Yes" and another_change.title() != "No":
+        while another_change.title() != "Tak" and another_change.title() != "Nie":
             print("Nieprawidlowy wybor.")
             another_change = input("Chcesz zmienic inny atrybut? Tak czy Nie: ")
-        if another_change.title() == "No":
+        if another_change.title() == "Nie":
             break
 
     while choice == "2":    # dodaj punkty do schowka
         if pool == 30:      # schowek jest pelny
-            print("\nPrzepraszam, nie masz zadnych punktow w swoich atrybutach."
-            "\nSprobuj najpierw dodac jakies punkty do swoich atrybutow.")
+            print("\nPrzepraszam, nie masz zadnych punktow w swoich atrybutach.")
+            print("\nSprobuj najpierw dodac jakies punkty do swoich atrybutow.")
             break
         print("\nZ jakiego atrybutu chcesz zabrac punkty?")
-        for attribute, points in attribute.items():
+        for attribute, points in attributes.items():
             print(attribute.title(), ":\t", points)
         att_to_change = input("Wybor: ")
-        while (att_to_change.title() != "Strength" and
-            att_to_change.title() != "Health" and
-            att_to_change.title() != "Wisdom" and
-            att_to_change.title() != "Dexterity"):
+        while (att_to_change.title() != "Sila" and
+            att_to_change.title() != "Zdrowie" and
+            att_to_change.title() != "Madrosc" and
+            att_to_change.title() != "Zrecznosc"):
             print("\nTo jest nieprawidlowy wybor.")
             print("\nZ ktorego atrybutu chcesz zabrac punkty?")
-            for attribute, points in attribute.items():
+            for attribute, points in attributes.items():
                 print(attribute.title(), ":\t", points)
             att_to_change = input("Wybor: ")
         while attributes[att_to_change] == 0:       # zadneg punkty nie moga byc usuniete
             print("Nie masz zadnych punktow w tym atrybucie.")
             att_to_change = input("Wybor: ")
-            while (att_to_change.title() != "Strength" and
-                att_to_change.title() != "Health" and
-                att_to_change.title() != "Wisdom" and
-                att_to_change.title() != "Dexterity"):
+            while (att_to_change.title() != "Sila" and
+                att_to_change.title() != "Zdrowie" and
+                att_to_change.title() != "Madrosc" and
+                att_to_change.title() != "Zrecznosc"):
                 print("\nTo jest nieprawidlowy wybor.")
                 print("\nZ ktorego atrybutu chcesz zabrac punkty?")
                 att_to_change = input("Wybor: ")
         points = int(input("\nJak duzo punktow chcesz usunac?: "))
         while points > attributes[att_to_change]:   #za malo punktow w atrybucie
-            print("Przepraszam, to jest za duzo punktow! Masz tylko", attributes[att_to_change], "w", att_to_change)
+            print("Przepraszam, to jest za duzo punktow! Masz tylko", 
+                    attributes[att_to_change], "w", att_to_change)
             points = int(input("\nJak duzo pinktow chcesz usunac?: "))
         print("OK!")
         pool += points
