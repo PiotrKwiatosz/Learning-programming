@@ -2,9 +2,14 @@
 # wprowadzenie imienia i nazwiska osoby (plci meskiej) i przedstawi imie
 # i nazwisko jej ojca.
 
+import string
+
+
 print("\tMozesz tu sprawdzic kto jest Twoim ojciem!")
 print("\n\tTylko dla osob plci meskiej!")
 
+names = 0
+surnames = 0
 choice = None
 while choice != "0":
     
@@ -20,12 +25,26 @@ while choice != "0":
     choice = input("Wybierasz: ")
     print()
 
-    while choice == "1":
+    while choice == "0":
+        print("Zegnaj!")
 
-        name = input("Prosze wprowadz swoje imie: ")
-        surname = input("Teraz prosze wprowadz swoje nazwisko: ")
+    while choice == "1":
+        name = input("Prosze wprowadz imie: ")
+        surname = input("Teraz prosze wprowadz nazwisko: ")
         print(name, surname, "zgadza sie?")
-        input("Chcesz jeszcze kogos dodac?: ")
+        names = [name + surname]
+        add = input("Chcesz jeszcze kogos dodac?: Tak czy Nie? ")
+        if add != "Tak" and add != "Nie":
+            print("Nieprawidlowy wybor")
+            add = input("Chcesz jeszcze kogos dodac?: Tak czy Nie? ")
+        if add == "Nie":
+            break
+
+    while choice == "2":
+        print("Jakie imie z podanej listy chcesz edyowac?: ")
+        print(names)
+        input("Podaj numer imienia: ")
+
 
 
 input("\n\nAby zakonczyc program, nacisnij klawisz ENTER")
