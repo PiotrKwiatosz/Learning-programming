@@ -8,7 +8,7 @@ import string
 print("\tMozesz tu sprawdzic kto jest Twoim ojciem!")
 print("\n\tTylko dla osob plci meskiej!")
 
-names = 0
+names = {"Buboslaw" : "Bubkowski", "Funtoslaw" : "Funt"}
 surnames = 0
 choice = None
 while choice != "0":
@@ -30,9 +30,10 @@ while choice != "0":
 
     while choice == "1":
         name = input("Prosze wprowadz imie: ")
-        surname = input("Teraz prosze wprowadz nazwisko: ")
-        print(name, surname, "zgadza sie?")
-        names = [name + surname]
+        if name not in names:
+            surname = input("Teraz prosze wprowadz nazwisko: ")
+            names[name] = surname
+            print("Osoba: ", names, "zostala dodana")
         add = input("Chcesz jeszcze kogos dodac?: Tak czy Nie? ")
         if add != "Tak" and add != "Nie":
             print("Nieprawidlowy wybor")
