@@ -2,9 +2,6 @@
 # wprowadzenie imienia i nazwiska osoby (plci meskiej) i przedstawi imie
 # i nazwisko jej ojca.
 
-import string
-
-
 print("\tMozesz tu sprawdzic kto jest Twoim ojciem!")
 print("\n\tTylko dla osob plci meskiej!")
 
