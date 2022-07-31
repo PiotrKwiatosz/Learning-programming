@@ -5,7 +5,7 @@
 print("\tMozesz tu sprawdzic kto jest Twoim ojciem!")
 print("\n\tTylko dla osob plci meskiej!")
 
-names = {"Buboslaw" : "Bubkowski", "Funtoslaw" : "Funt"}
+names = {"Kacper Kwiatosz" : "Piotr Kwiatosz", "Funtek Funt" : "Funtoslaw Funt"}
 surnames = 0
 choice = None
 while choice != "0":
@@ -41,7 +41,20 @@ while choice != "0":
     while choice == "2":
         print("Jakie imie z podanej listy chcesz edyowac?: ")
         print(names)
-        input("Podaj numer imienia: ")
+        name = input("Podaj imie i nazwisko ")
+        if name not in names:
+            print("Nie ma takiego, podaj jeszcze raz")
+            input("Podaj imie i nazwisko ")
+        if name in names:
+            name = input("Jakie jest nowe imie? :")
+            names[surname] = name
+            print("\n Imie ", name, "zostalo zmienione")
+        if surname in names:
+            surname = input("Jakie jest nowe nazwisko? :")
+            names[name] = surname
+            print("\nNazwisko ", surname, "zostało zmieniona")
+            
+
 
 
 
