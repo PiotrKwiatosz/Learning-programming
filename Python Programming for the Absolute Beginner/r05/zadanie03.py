@@ -6,8 +6,8 @@ print("\tMozesz tu sprawdzic kto jest Twoim ojciem!")
 print("\n\tTylko dla osob plci meskiej!")
 
 sf = {"Kacper Kwiatosz" : "Piotr Kwiatosz", "Funtek Funt" : "Funtoslaw Funt"}
-son = ''
-father = ''
+son = ""
+father = ""
 choice = None
 
 while choice != "0":
@@ -50,7 +50,7 @@ while choice != "0":
     elif choice == "3":
         sorf = input("Czy znasz syna lub ojca? ")
         sorf = sorf.lower
-        while sorf != "son" and sorf != "father":
+        if sorf != "son" and sorf != "father":
             print("Przeprasza, prosze napisz syna lub ojca")
             sorf = input("Czy znasz syna lub ojca? ")
             sorf = sorf.lower
