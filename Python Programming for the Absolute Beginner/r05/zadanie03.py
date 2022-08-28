@@ -16,7 +16,7 @@ while choice != "0":
     Wybierz co chcesz zrobic:
     
     0 - Wyjsc
-    1 - Zobacz pary Synn-Ojciec
+    1 - Zobacz pary Syn-Ojciec
     2 - Dodaj pare Syn-Ojciec
     3 - Zamien pare Syn-Ojciec
     4 - Usuwanie par Syn-Ojciec
@@ -49,39 +49,36 @@ while choice != "0":
 
     elif choice == "3":
         sorf = input("Czy znasz syna lub ojca? ")
-        sorf = sorf.lower
-        if sorf != "son" and sorf != "father":
+        sorf = sorf.lower()
+        print("Aaa,", sorf)
+        if sorf != "syna" and sorf != "ojca":
             print("Przeprasza, prosze napisz syna lub ojca")
             sorf = input("Czy znasz syna lub ojca? ")
             sorf = sorf.lower
         
-        if sorf == "son":
+        if sorf == "syna":
             son = input("Kto jest synem? ")
-            son = son.lower
-            if son in sf.keys():
-                print("Ten obecny ojciec jest" , sf[son].title())
+            if son in sf:
+                print("Tego obecnego ojcem jest" , sf[son].title())
                 father = input("Kim chcesz go zamienic? ")
                 father = father.lower()
                 sf[son] = father
                 print("Ojcem ", son.title(), "jest teraz ", father.title())
-            elif son not in sf.keys():
+            elif son not in sf():
                 print("Ten syn nie istnieje. Dlaczego go moze nie dodasz?")
                 continue
         
-        if sorf == "father":
+        if sorf == "ojca":
             father = input("Kto jest ojcem? ")
-            father = father.lower
-            if father in sf.values():
-                for son, dad in sf.items:
-                    if dad == father:
-                        print("Ten obecny syn jest ", son.title())
-                        del sf[son]
-                        son = input("Kim chcesz go zamienic? ")
-                        sf[son] = father
-                        print(son.title(), "jest", father.title(), "synem.")
-                        break
-            elif father not in sf.values:
-                print(father, "nie istnieje. Dlaczego go nie dodasz?")
+            if father in sf:
+                print("Tego obecnego synem jest ", sf[father].title())
+                son = input("Kim chcesz go zamienic? ")
+                son = son.lower()
+                sf[father] = son
+                print(son.title(), "jest teraz", father.title(), "synem.")
+            elif father not in sf():
+                print("Ten ojciec nie istnieje. Dlaczego go nie dodasz?")
+                continue
 
     elif choice == "4":
         son = input("Kto jest synem? ")
