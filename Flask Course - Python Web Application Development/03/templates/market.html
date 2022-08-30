@@ -8,62 +8,62 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>PK's Market Page</title>
+    <title>Market Page</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Piotr Kwiatosz - Flask Market</a>
+      <a class="navbar-brand" href="#">Flask Market</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"</span>
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collaspe navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Market</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
-        </li>
-      </li>
-    </ul>
-    </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Market</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+        </ul>
+      </div>
     </nav>
 
-    <h1>Strona Market </h1>
+    <h1>Sklep</h1>
     <table class="table table-hover table-dark">
-      <thead>
-          <tr>
-              <!-- Your Columns HERE -->
-              <th scope="col">ID</th>
-              <th scope="col">Nazwa</th>
-              <th scope="col">KOD</th>
-              <th scope="col">Cena</th>
-              <th scope="col">Opcje</th>
-          </tr>
-      </thead>
-      <tbody>
-          <!-- Your rows inside the table HERE: -->
-          {% for item in items %}
-              <tr>
-                  <td>{{ item.id }}</td>
-                  <td>{{ item.nazwa }}</td>
-                  <td>{{ item.kod }}</td>
-                  <td>{{ item.cena }}PLN</td>
-                  <td>
-                      <button class="btn btn-outline btn-info">Wiecej informacji</button>
-                      <button class="btn btn-outline btn-success">Kup to</button>
-                  </td>
-              </tr>
-          {% endfor %}
-      </tbody>
-  </table>
+        <thead>
+            <tr>
+                <!-- Your Columns HERE -->
+                <th scope="col">ID</th>
+                <th scope="col">Nazwa</th>
+                <th scope="col">KOD</th>
+                <th scope="col">Cena</th>
+                <th scope="col">Opcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Your rows inside the table HERE: -->
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.barcode }}</td>
+                    <td>{{ item.price }} PLN</td>
+                    <td>
+                        <button class="btn btn-outline btn-info">Wiecej informacji</button>
+                        <button class="btn btn-outline btn-success">Kup to!</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -81,6 +81,6 @@
       body {
         background-color: #212121;
         color: white
-    }
+      }
   </style>
 </html>
