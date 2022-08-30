@@ -9,8 +9,8 @@ def home_page():
 @app.route('/market')
 def market_page():
     items = [
-        {'id': 1, 'name': 'Phone', 'barcode': '893212299897', 'price': 500},
-        {'id': 2, 'name': 'Laptop', 'barcode': '123985473165', 'price': 900},
-        {'id': 3, 'name': 'Keyboard', 'barcode': '231985128446', 'price': 150}
+        {'id': 1, 'name': 'Kolczyk', 'barcode': '893212299897', 'price': 699},
+        {'id': 2, 'name': 'Wino', 'barcode': '123985473165', 'price': 89},
+        {'id': 3, 'name': 'Poduszka', 'barcode': '231985128446', 'price': 150}
     ]
     return render_template('market.html', items=items)
