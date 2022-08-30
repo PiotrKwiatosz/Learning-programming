@@ -55,7 +55,7 @@ while choice != "0":
             print("Przeprasza, prosze napisz syna lub ojca")
             sorf = input("Czy znasz syna lub ojca? ")
             sorf = sorf.lower
-        
+
         if sorf == "syna":
             son = input("Kto jest synem? ")
             if son in sf:
