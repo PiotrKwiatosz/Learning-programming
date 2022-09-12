@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}
+Strona Rejestracji
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7qqRevzB30TPvjw5LI7_8sgH8mxigfZ17MQ&usqp=CAU" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Prosze stworz swoje konto
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="Nazwa Uzytkownika") }}
+
+            {{ form.email_address.label() }}
+            {{ form.email_address(class="form-control", placeholder="E-mail") }}
+
+            {{ form.password1.label() }}
+            {{ form.password1(class="form-control", placeholder="Haslo") }}
+
+            {{ form.password2.label() }}
+            {{ form.password2(class="form-control", placeholder="Powtorz haslo") }}
+
+            <br>
+
+            <div class="checkbox mb-3">
+                <h6>Masz juz konto?</h6>
+                <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Zaloguj</a>
+             </div>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}
