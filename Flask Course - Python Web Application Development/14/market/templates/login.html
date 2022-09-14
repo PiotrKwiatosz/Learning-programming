@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+    Strona logowania
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-signin" style="color:white">
+            {{ form.hidden_tag() }}
+            <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzSvriUjkQM7tWWUdSKXNcOfIgvyGs_3tAjQ&usqp=CAU" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Zaloguj sie
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="Uzytkownik") }}
+
+            {{ form.password.label() }}
+            {{ form.password(class="form-control", placeholder="Haslo") }}
+
+            <br>
+
+
+            <div class="checkbox mb-3">
+               <h6>Nie masz konta?</h6>
+               <a class="btn btn-sm btn-secondary" href="{{ url_for('register_page') }}">Zarejestruj</a>
+            </div>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}

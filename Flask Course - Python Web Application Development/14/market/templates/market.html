@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+  SKLEP
+{% endblock %}
+
+{% block content %}
+
+<div class="row" style="margin-top:20px; margin-left:20px">
+    <div class="col-8">
+        <h2>Dostepne rzeczy w Sklepie</h2>
+        <p>Kliknij na jakas rzecz aby ja kupic</p>
+        <br>
+      <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <!-- Your Columns HERE -->
+                <th scope="col">ID</th>
+                <th scope="col">Nazwa</th>
+                <th scope="col">KOD</th>
+                <th scope="col">Cena</th>
+                <th scope="col">Opcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Your rows inside the table HERE: -->
+            {% for item in items %}
+            {% include 'includes/items_modals.html' %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.barcode }}</td>
+                    <td>{{ item.price }} PLN</td>
+                    <td>
+                        <button class="btn btn-outline btn-info" data-toggle="modal" data-target="#Modal-MoreInfo-{{ item.id }}">Wiecej...</button>
+                        <button class="btn btn-outline btn-success" data-toggle="modal" data-target="#Modal-PurchaseConfirm-{{ item.id }}">Zakup ta rzecz</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ </div>
+   <div class="col-4">
+     <h2>Kupione rzeczy</h2>
+     <p>Kliknij na sprzedana rzecz aby ja oddac spowrotem do Sklepu</p>
+     <br>
+  </div>
+</div>
+{% endblock %}
