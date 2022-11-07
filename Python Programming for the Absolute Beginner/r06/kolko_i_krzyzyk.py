@@ -76,18 +76,18 @@ def legal_moves(board):
     for square in range(NUM_SQUARES):
         if board[square] == EMPTY:
             moves.append(square)
-        return moves
+    return moves
 
 def winner(board):
     """Ustal zwyciezce gry."""
     WAYS_TO_WIN = ((0, 1, 2),
-                   (3, 4, 5),
-                   (6, 7, 8),
-                   (0, 3, 6),
-                   (1, 4, 7),
-                   (2, 5, 8),
-                   (0, 4, 8),
-                   (2, 4, 6))
+                    (3, 4, 5),
+                    (6, 7, 8),
+                    (0, 3, 6),
+                    (1, 4, 7),
+                    (2, 5, 8),
+                    (0, 4, 8),
+                    (2, 4, 6))
 
     for row in WAYS_TO_WIN:
         if board[row[0]] == board[row[1]] == board[row[2]] != EMPTY:
@@ -151,7 +151,7 @@ def next_turn(turn):
         return X
 
 
-def congart_winner(the_winner, computer, human):
+def congrat_winner(the_winner, computer, human):
     """Pogratuluj zwyciezcy."""
     if the_winner != TIE:
         print(the_winner, "jest zwyciezca!\n")
@@ -160,16 +160,16 @@ def congart_winner(the_winner, computer, human):
 
     if the_winner == computer:
         print("Jak przewidywalem, Czlowieku, jeszcze raz zostalem triumfatorem. \n" \
-              "Dowod na to, ze komputery przewyzszaja ludzi pod kazdym wzgledem.")
-                  
+            "Dowod na to, ze komputery przewyzszaja ludzi pod kazdym wzgledem.")
+                
     elif the_winner == human:
         print("No nie! To niemozliwe! Jakos udalo Ci sie mnie zwiesc, Czlowieku. \n" \
             "Ale to sie nigdy nie powtorzy! Ja, komputer, przyrzekam Ci to!")
 
     elif the_winner == TIE:
         print("Miales mnostwo szczescia, Czlowieku, i jakos udalo Ci sie ze mna " \
-              "zremisowac. \nSwietuj ten dzien... bo to najlepszy wynik, jaki mozesz " \
-              "kiekolwiek osiagnac.")
+            "zremisowac. \nSwietuj ten dzien... bo to najlepszy wynik, jaki mozesz " \
+            "kiekolwiek osiagnac.")
 
 def main():
     display_instruct()
@@ -189,7 +189,7 @@ def main():
         turn = next_turn(turn)
             
     the_winner = winner(board)
-    congart_winner(the_winner, computer, human)
+    congrat_winner(the_winner, computer, human)
 
 # rozpocznij program
 main()
