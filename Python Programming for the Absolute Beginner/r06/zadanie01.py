@@ -1,4 +1,5 @@
-# Popraw fubckje 'ask_number()' w taki sposob, aby mogla byc wywolywana z wartoscia kroku. Spraw, aby domyslna wartoscia kroku byla liczba 1
+## Popraw fubckje 'ask_number()' w taki sposob, aby mogla byc wywolywana z wartoscia kroku. 
+## Spraw, aby domyslna wartoscia kroku byla liczba 1
 
 # Kolko i krzyzyk
 # Komputer gra w kolko i krzyzyk przeciwko czlowiekowi
@@ -9,8 +10,6 @@ O = "O"
 EMPTY = " "
 TIE = "TIE"
 NUM_SQUARES = 9
-move_start = 1
-
 
 def display_instruct():
     """Wyswietl instrukcje gry."""
@@ -38,15 +37,17 @@ def ask_yes_no(question):
         response = input(question).lower()
     return response
 
-def ask_number(question, low, high):
+## ZADANIE 01
+#
+def ask_number(question, low, high, step = 1):
     """Popros o podanie liczy z odpowiedniego zakresu."""
-    print("Krok numer: ", move_start)
-    while move_start not in range(low, high):
-        response = int(move_start)
+    print("Krok numer: ", step)
     response = None
-    while response not in range(low, high):
+    while response not in range(low, high, step):
         response = int(input(question))
     return response
+#
+## KONIEC ZADANIA
 
 def pieces():
     """Ustal, czy pierwszy ruch nalezy do gracza czy do komputera."""
