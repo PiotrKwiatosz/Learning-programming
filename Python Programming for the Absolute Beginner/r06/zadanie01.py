@@ -39,9 +39,9 @@ def ask_yes_no(question):
 
 ## ZADANIE 01
 #
-def ask_number(question, low, high, step = 1):
+def ask_number(question, low, high, step=1):
     """Popros o podanie liczy z odpowiedniego zakresu."""
-    print("Krok numer: ",)
+    print("Krok numer: ",step)
     response = None
     while response not in range(low, high, step):
         response = int(input(question))
