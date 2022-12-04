@@ -1,5 +1,6 @@
-## Popraw fubckje 'ask_number()' w taki sposob, aby mogla byc wywolywana z wartoscia kroku. 
+## Popraw funkcje 'ask_number()' w taki sposob, aby mogla byc wywolywana z wartoscia kroku. 
 ## Spraw, aby domyslna wartoscia kroku byla liczba 1
+
 
 # Kolko i krzyzyk
 # Komputer gra w kolko i krzyzyk przeciwko czlowiekowi
@@ -39,13 +40,14 @@ def ask_yes_no(question):
 
 ## ZADANIE 01
 #
-def ask_number(question, low, high, step=1):
+def ask_number(question, low, high, step):
     """Popros o podanie liczy z odpowiedniego zakresu."""
-    print("Krok numer: ",step)
+    print("Krok numer: ", step)
     response = None
     while response not in range(low, high, step):
         response = int(input(question))
     return response
+    
 #
 ## KONIEC ZADANIA
 
@@ -111,7 +113,7 @@ def human_move(board, human):
     legal = legal_moves(board)
     move = None
     while move not in legal:
-        move = ask_number("Jaki bedzie Twoj ruch? (0 - 8):", 0, NUM_SQUARES)
+        move = ask_number("Jaki bedzie Twoj ruch? (0 - 8):", 0, NUM_SQUARES, 1)
         if move not in legal:
             print("\nTo pole jest juz zajete, niemadry Czlowieku. Wybierz inne.\n")
     print("Znakomicie...")
