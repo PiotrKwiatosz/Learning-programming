@@ -47,7 +47,6 @@ def ask_number(question, low, high, step):
     while response not in range(low, high, step):
         response = int(input(question))
     return response
-    
 #
 ## KONIEC ZADANIA
 
