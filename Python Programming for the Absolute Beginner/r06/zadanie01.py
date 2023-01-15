@@ -47,12 +47,15 @@ def step(low, high):
         response = int(input(step))
     print("Krok numer: ", step)
 
-def ask_number(question, low, high):
+def ask_number(question, low, high, krok=1):
     """Popros o podanie liczy z odpowiedniego zakresu."""
     response = None
-    while response not in range(low, high):
+    while response not in range(low, high, krok):
         response = int(input(question))
     return response
+
+zwrot = ask_number("Wybierz liczbę od 0 do 8", 0, 9, krok=3)
+print("To otrzymałem od funkcji ask_number:", zwrot)
 
 #
 ## KONIEC ZADANIA
@@ -119,7 +122,7 @@ def human_move(board, human):
     legal = legal_moves(board)
     move = None
     while move not in legal:
-        move = ask_number("Jaki bedzie Twoj ruch? (0 - 8):", 0, NUM_SQUARES)
+        move = ask_number("Jaki bedzie Twoj ruch? (0 - 8):", 0, NUM_SQUARES, 1)
         if move not in legal:
             print("\nTo pole jest juz zajete, niemadry Czlowieku. Wybierz inne.\n")
     print("Znakomicie...")
