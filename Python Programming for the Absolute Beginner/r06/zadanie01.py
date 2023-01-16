@@ -53,10 +53,6 @@ def ask_number(question, low, high, krok=1):
     while response not in range(low, high, krok):
         response = int(input(question))
     return response
-
-zwrot = ask_number("Wybierz liczbę od 0 do 8", 0, 9, krok=3)
-print("To otrzymałem od funkcji ask_number:", zwrot)
-
 #
 ## KONIEC ZADANIA
 
@@ -126,6 +122,7 @@ def human_move(board, human):
         if move not in legal:
             print("\nTo pole jest juz zajete, niemadry Czlowieku. Wybierz inne.\n")
     print("Znakomicie...")
+    print("To otrzymałem od funkcji ask_number:", move)
     return move
 
 def computer_move(board, computer, human):
