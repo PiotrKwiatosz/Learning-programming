@@ -40,17 +40,10 @@ def ask_yes_no(question):
 
 ## ZADANIE 01
 #
-def step(low, high):
-    step = 1
-    response = None
-    while response not in range(low, high):
-        response = int(input(step))
-    print("Krok numer: ", step)
-
-def ask_number(question, low, high, krok=1):
+def ask_number(question, low, high, step = 1):
     """Popros o podanie liczy z odpowiedniego zakresu."""
     response = None
-    while response not in range(low, high, krok):
+    while response not in range(low, high, step):
         response = int(input(question))
     return response
 #
@@ -118,7 +111,7 @@ def human_move(board, human):
     legal = legal_moves(board)
     move = None
     while move not in legal:
-        move = ask_number("Jaki bedzie Twoj ruch? (0 - 8):", 0, NUM_SQUARES, 1)
+        move = ask_number("Jaki bedzie Twoj ruch? (0 - 8):", 0, NUM_SQUARES)
         if move not in legal:
             print("\nTo pole jest juz zajete, niemadry Czlowieku. Wybierz inne.\n")
     print("Znakomicie...")
@@ -189,7 +182,7 @@ def congrat_winner(the_winner, computer, human):
 def main():
     display_instruct()
     computer, human = pieces()
-    step
+    
     turn = X
     board = new_board()
     display_board(board)
