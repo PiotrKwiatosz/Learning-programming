@@ -1,4 +1,5 @@
 # Odczytaj to
+#
 # Demonstruje odczytywanie danych z pliku tekstowego
 
 print("Otwarcie i zamkniecie pliku.")
