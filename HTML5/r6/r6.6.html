@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Kurs języka HTML5</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Podstawowy kurs HTML5" />
+
+        <style type="text/css">
+
+            canvas {
+                border : 2px solid #000;
+                background-color: #eee;
+            }
+        </style>
+
+        <script type="text/javascript">
+
+            window.onload = function(){
+                var plotno = document.getElementById("rysinek");
+                var obiekt = plotno.getContext("2d");
+
+                // Kwadrat
+
+                obiekt.fillStyle = "blue";
+                obiekt.fillRect(100, 100, 50, 50);
+                obiekt.strokeRect(150, 150, 100, 100);
+
+                // Trójkąt
+
+                obiekt.moveTo(400, 400);
+                obiekt.lineTo(300, 300);
+                obiekt.lineTo(300, 100);
+                obiekt.lineTo(400, 400);
+
+                obiekt.stroke();
+
+                // Tekst
+
+                obiekt.fillStyle = "green";
+                obiekt.font - "20px Verdana";
+                obiekt.fillText("Podstawowy kurs języka HTML5", 50, 50);
+               
+            }
+
+        </script>
+        
+    </head>
+
+    <body>
+        <canvas id="rysunek" width="500" height="500">
+            Twoja przeglądarka nie obsługuje obiektu CANVAS
+        </canvas>
+
+    </body>
+</html>
