@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Kurs języka HTML5</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Podstawowy kurs HTML5" />
+    </head>
+
+    <body>
+        <form action="obsluga.html" method="get">
+            <fieldset>
+                <legend>Wybierz system operacyjny</legend>
+
+                <p><label><input type="radio" name="system" checked />Windows</label></p>
+                <p><label><input type="radio" name="system" disabled />MacOS</label></p>
+                <p><label><input type="radio" name="system" />Linux</label></p>
+
+            </fieldset>
+
+            <p><label><input type="checkbox" checked />Wyrażam zgodę na przetwarzanie moich danych osobowych</label></p>
+            <p><label><input type="checked" disabled />Wyrażam zgodę na przesyłanie informacji handlowych</label></p>
+
+            <p><input type="submit" value="Prześlij dane formularza" /><input type="reset" value="Wyczyść" /></p>    
+
+        </form>
+    </body>
+</html>
