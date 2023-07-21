@@ -1,0 +1,17 @@
+/* Komentarz jednolinijkowy */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    text-align: left;
+    font-size: 12pt;
+}
+
+/*
+    Komentarz
+    wielolinijkowy
+*/
+#kwadrat {
+    height: 200px;
+    width: 200px;
+    background: green;
+}
