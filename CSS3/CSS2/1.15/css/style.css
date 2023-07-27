@@ -1,0 +1,23 @@
+* {
+    font-weight: bold;
+    margin: 0px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+    border: 1px solid;
+}
+
+footer {
+    font-size: 8pt;
+    color: #0000FF;
+    text-align: center;
+}
+
+p, span {
+    font-size: 20pt;
+    text-align: justify;
+}
