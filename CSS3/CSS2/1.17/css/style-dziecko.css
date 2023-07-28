@@ -1,0 +1,22 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer {
+    font-size: 8pt;
+    color: #0000FF;
+    text-align: center;
+}
+
+li {
+    font-family: 16pt;
+}
+
+li > a {
+    color: #00FF00;
+    text-decoration: none;
+    font-size: 20pt;
+}
