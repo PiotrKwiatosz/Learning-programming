@@ -1,0 +1,31 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer {
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+p#identyfikator {
+    font-size: 20pt;
+    color: #00FF00;
+    font-weight: bold;
+    text-align: center;
+}
+
+a[href] {
+    font-size: 30pt;
+}
+
+input[type=text] {
+    background-color: #FF0000;
+}
+
+img[alt~="stronie"] {
+    border: 4px solid #000000;
+}
