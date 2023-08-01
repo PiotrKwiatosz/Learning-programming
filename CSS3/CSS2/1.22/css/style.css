@@ -1,0 +1,28 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+a{
+    font-size: 30pt;
+}
+
+a:link{
+    color: #00FF00;
+}
+
+a:visited{
+    color: #FF0000;
+}
+
+a:active{
+    color: #FFFF00;
+}
