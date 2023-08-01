@@ -1,0 +1,37 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+p{
+    font-size: 20pt;
+    text-align: justify;
+}
+
+p::first-letter{
+    font-size: 33pt;
+}
+
+p::first-line{
+    color: #FF0000;
+}
+
+p::before{
+    content: 'To jest nowe zdanie. ';
+    font-size: 26pt;
+    color: #00FF00;
+}
+
+p::after{
+    content: 'To jest nowe zdanie';
+    font-size: 26pt;
+    color: #0000FF;
+}
