@@ -1,0 +1,19 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#normal{font-style: normal}
+#italic{font-style: italic}
+#oblique{font-style: oblique}
+
+#normalweight{font-weight: normal}
+#bold{font-weight: bold}
