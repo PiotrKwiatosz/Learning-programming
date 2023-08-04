@@ -1,0 +1,22 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#none{text-decoration: none}
+#underline{text-decoration: underline}
+#line{text-decoration: line-through}
+#overline{text-decoration: overline}
+#blink{text-decoration: blink}
+
+#capitalize{text-transform: capitalize}
+#uppercase{text-transform: uppercase}
+#lowercase{text-transform: lowercase}
