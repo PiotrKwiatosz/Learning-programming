@@ -1,0 +1,18 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#roz{letter-spacing: 6px}
+#sci{letter-spacing: -4px}
+
+#wsroz{word-spacing: 11px}
+#wssci{word-spacing: -6px}
