@@ -1,0 +1,23 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#tabela{
+    height: 500px;
+    width: 500px;
+    border: 1px solid #000000;
+}
+
+#pierwsza{vertical-align: bottom; text-align: right;}
+#druga{vertical-align: top; text-align: center;}
+#trzecia{vertical-align: middle;}
+#czwarta{}
