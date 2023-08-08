@@ -1,0 +1,27 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#circle{list-style-type: circle}
+#dics{list-style-type: disc}
+#square{list-style-type: square}
+#none{list-style-type: none}
+
+#decimal{list-style-type: decimal}
+#decimal-zero{list-style-type: decimal-leading-zero}
+#upper-roman{list-style-type: upper-roman}
+#lower-roman{list-style-type: lower-roman}
+#upper-latin{list-style-type: upper-latin}
+#lower-latin{list-style-type: lower-latin}
+#lower-greek{list-style-type: lower-greek}
+#georgian{list-style-type: georgian}
+#armenian{list-style-type: armenian}
