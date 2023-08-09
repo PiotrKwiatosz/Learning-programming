@@ -1,0 +1,19 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#rgbred{color: rgb(255, 0, 0)}
+#rgbgreen{color: rgb(0, 255, 0)}
+#rgbblue{color: rgb(0, 0, 255)}
+#rgbwhite{color: rgb(255, 255, 255)}
+#rgbblack{color: rgb(0, 0, 0)}
+#rgbpink{color: rgb(255, 192, 203)}
