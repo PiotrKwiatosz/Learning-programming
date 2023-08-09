@@ -1,0 +1,19 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#red{color: red}
+#blue{color: blue}
+#green{color: green}
+#white{color: white}
+#black{color: black}
+#pink{color: pink}
