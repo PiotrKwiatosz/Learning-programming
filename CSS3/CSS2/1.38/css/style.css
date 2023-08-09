@@ -1,0 +1,24 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+p{border: 1px solid #000000}
+
+#default{cursor: default}
+#pointer{cursor: pointer}
+#crosshair{cursor: crosshair}
+#move{cursor: move}
+#wait{cursor: wait}
+#text{cursor: text}
+#help{cursor: help}
+#progress{cursor: progress}
+#e-resize{cursor: e-resize}
