@@ -1,0 +1,19 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#hred{color: #FF0000}
+#hgreen{color: #00FF00}
+#hblue{color: #0000FF}
+#hwhite{color: #FFFFFF}
+#hblack{color: #000000}
+#hpink{color: #FFC0CB}
