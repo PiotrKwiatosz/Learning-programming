@@ -32,7 +32,7 @@ def market_page():
         if s_item_object:
             if current_user.can_sell(s_item_object):
                 s_item_object.sell(current_user)
-                flash(f"Gratulacje! Sprzedales{s_item_object.name} spowrotem do Sklepu!", category='success')
+                flash(f"Gratulacje! Sprzedales{s_item_object.name} z powrotem do Sklepu!", category='success')
             else:
                 flash(f"Cos poszlo zle ze sprzedaza{s_item_object.name}", category='danger')
 
