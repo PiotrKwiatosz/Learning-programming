@@ -1,0 +1,47 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#obramowanie1{
+    width: 200px;
+    height: 200px;
+    border: 2px #000000 solid;
+    display: inline-block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 160px;
+}
+
+#obramowanie2{
+    width: 200px;
+    height: 200px;
+    border: 2px #000000 solid;
+    display: inline-block;
+    border-radius: 100px/20px;
+}
+
+#obramowanie3{
+    width: 200px;
+    height: 200px;
+    border: 2px #000000 solid;
+    display: inline-block;
+    border-radius: 200px/200px;
+}
+
+#obramowanie4{
+    width: 200px;
+    height: 200px;
+    border: 2px #000000 solid;
+    display: inline-block;
+    border-radius: 20px/20px;
+}
