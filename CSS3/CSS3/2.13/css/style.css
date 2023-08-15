@@ -1,0 +1,24 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; 
+    text-align: left;
+    font-size: 12pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#obramowanie{
+    width: 600px;
+    height: 400px;
+    background: #FF0000;
+    border: 24px #000000 dashed;
+    border-top: 20px #000000 dotted;
+    border-right: 30px #00FF00 double;
+    border-bottom: 30px #00FFFF dashed;
+    border-left: 50px #FF00FF inset;
+
+}
