@@ -1,0 +1,16 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FF0000; 
+    text-align: left;
+    font-size: 12pt;
+    background-image: url(../img/car.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 30pt;
+}
