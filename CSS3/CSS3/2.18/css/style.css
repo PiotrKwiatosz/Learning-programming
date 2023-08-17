@@ -1,0 +1,19 @@
+body{
+    color: #000000; 
+    text-align: left;
+    font-size: 18pt;
+    border: 5px #FF0000;
+    margin: 0px;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;
+    margin: 10pt
+}
+
+#margines_wewnetrzny{
+    border: 1px #000000 solid;
+    padding: 50px;
+    margin: 50px;
+}
