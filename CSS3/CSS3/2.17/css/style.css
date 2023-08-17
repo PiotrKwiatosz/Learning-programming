@@ -1,0 +1,22 @@
+body{
+    color: #000000; 
+    text-align: left;
+    font-size: 18pt;
+    border: 5px #FF0000;
+    margin: 0px;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;    
+    font-size: 8pt;
+}
+
+#margines{
+    border: 1px #000000 solid;
+    margin: 100px;
+}
+
+div{
+    margin: 100px
+}
