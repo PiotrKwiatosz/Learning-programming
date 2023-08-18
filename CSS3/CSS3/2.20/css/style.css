@@ -12,8 +12,24 @@ footer{
     margin: 10pt
 }
 
-#margines_wewnetrzny{
-    border: 1px #000000 solid;
-    padding: 50px;
-    margin: 50px;
+p{
+    border: 1px solid #000000;
+}
+
+div#jeden{
+    border: 1px solid #000000;
+    display: inline;
+}
+
+div#dwa{
+    border: 1px solid #000000;
+}
+
+span#trzy{
+    border: 1px solid #000000;
+    display: block;
+}
+
+span#cztery{
+    border: 1px solid #000000;
 }
