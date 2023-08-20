@@ -1,0 +1,28 @@
+body{
+    color: #000000; 
+    text-align: left;
+    font-size: 18pt;
+    border: 5px #FF0000;
+    margin: 0px;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;
+    margin: 10pt
+}
+
+p{
+    border: 1px solid #000000;
+    display: inline-block;
+}
+
+div#jeden{
+    border: 1px solid #000000;
+    display: inline-block;
+}
+
+span#dwa{
+    border: 1px solid #000000;
+    display: list-item;
+}
