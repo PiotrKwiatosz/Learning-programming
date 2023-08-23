@@ -1,0 +1,31 @@
+body{
+    color: #000000; 
+    text-align: left;
+    font-size: 18pt;
+    border: 5px #FF0000;
+    margin: 0px;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;
+    margin: 10pt
+}
+
+div#warstwa1{
+    position: relative;
+    background: #00FF00;
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+}
+
+div#warstwa2{
+    position: relative;
+    background: #0000FF;
+    height: 200px;
+    width: 200px;
+    top: -100px;
+    left: 100px;
+    z-index: 0;
+}
