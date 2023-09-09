@@ -1,0 +1,45 @@
+body{
+    color: #000000; 
+    text-align: left;
+    font-size: 18pt;
+    border: 5px #FF0000;
+    margin: 0px;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;
+    margin: 10pt
+}
+
+div#overflow1{
+    border: 1px solid #000000;
+    background: #00FF00;
+    height: 200px;
+    width: 200px;
+    overflow: visible;
+}
+
+div#overflow2{
+    border: 1px solid #000000;
+    background: #00FF00;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}    
+
+div#overflow3{
+    border: 1px solid #000000;
+    background: #00FF00;
+    height: 200px;
+    width: 200px;
+    overflow: auto;
+}    
+
+div#overflow4{
+    border: 1px solid #000000;
+    background: #00FF00;
+    height: 200px;
+    width: 200px;
+    overflow: scroll;
+}
