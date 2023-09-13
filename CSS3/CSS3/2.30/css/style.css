@@ -1,0 +1,29 @@
+body{
+    color: #000000; 
+    text-align: left;
+    font-size: 18pt;
+    border: 5px #FF0000;
+    margin: 0px;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;
+    margin: 10pt
+}
+
+td, table{
+    width: 200px;
+    height: 100px;
+    border: 1px solid #000000;
+    caption-side: top;
+}
+
+#collapse{
+    border-collapse: collapse;
+}
+
+#separate{
+    border-collapse: separate;
+    border-spacing: 8px;
+}
