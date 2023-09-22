@@ -13,11 +13,11 @@ footer{
 }
 
 #glowny{
-    position: statoc;
+    position: static;
     height: 300px;
     width: 800px;
     border: 5px solid #FFFF00;
-    background: rgba(0, 255, 255, .200);
+    background: rgba(0, 255, 255, .20);
 }
 
 #jeden{
