@@ -1,0 +1,50 @@
+body{
+    color: #000000;
+    border: 5px solid #FF0000;
+    text-align: left;
+    font-size: 20pt;
+    margin: 10px;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;
+    margin: 10pt
+}
+
+#glowny{
+    position: fixed;    
+    height: 300px;
+    width: 800px;
+    border: 5px solid #FFFF00;
+    background: rgba(0, 255, 255, .20);
+}
+
+#jeden{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000000;
+    background: #FF0000;
+    display: inline-block;
+}
+
+#dwa{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000000;
+    background: #00FF00;
+    display: inline-block;
+    left: 200px;
+}
+
+#trzy{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000000;
+    background: #0000FF;
+    display: inline-block;
+    left: 400px;
+}
