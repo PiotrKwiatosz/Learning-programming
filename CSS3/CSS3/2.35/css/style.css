@@ -12,7 +12,8 @@ footer{
     margin: 10pt
 }
 
-#glowny{    
+#glowny{
+    position: relative;    
     height: 300px;
     width: 800px;
     border: 5px solid #FFFF00;
