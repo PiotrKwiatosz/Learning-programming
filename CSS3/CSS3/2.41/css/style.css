@@ -1,0 +1,56 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: #000000;
+    width: 1200px;
+    margin: 6px auto 0 auto;
+}
+
+div#glowny{
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+header#naglowek{
+    height: 200px;
+}
+
+div#logo{
+    width: 300px;
+    height: 100%;
+    background: #FF0000;
+}
+
+div#banner{
+    width: 900px;
+    height: 100%;
+    background: #00FF00;
+}
+
+div#zawartosc{
+
+}
+
+aside#lewy_panel{
+
+}
+
+aside#centralny_panel{
+
+}
+
+aside#prawy_panel{
+    
+}
+
+nav#menu{
+
+}
+
+div#reklama{
+
+}
+
+footer#stopka{
+    
+}
