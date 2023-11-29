@@ -161,11 +161,11 @@ div#etykieta_reklama{
 img#obrazek1{
     border: 1px solid #000000;
     width: 200px;
-    height: 100px;
+    height: 120px;
     margin-top: 12px;    
 }
 
 img#obrazek2{
     border: 1px solid #000000;
-    -webkit-transform: scale(23) lateX(-30);
+    -webkit-transform: scale(0.625) translateX(-55px);
 }
