@@ -1,0 +1,13 @@
+body{
+    color: #000000;
+    font-size: 20pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;
+}
+
+div[label^=to]{
+    font-size: 50px;
+}
