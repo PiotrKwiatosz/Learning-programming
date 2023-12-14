@@ -1,0 +1,25 @@
+body{
+    color: #000000;
+    font-size: 20pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;
+}
+
+div[label$=label]{
+    font-size: 50px;
+}
+
+div[label$="jest OK"]{
+    font-size: 50px;
+}
+
+a[href$=pl]{
+    font-size: 50px;
+}
+
+input[name$=e]{
+    background: #0000FF;
+}
