@@ -1,0 +1,17 @@
+body{
+    color: #000000;
+    font-size: 20pt;
+}
+
+footer{
+    text-align: center;
+    color: #0000FF;
+}
+
+:disabled{
+    outline: 1px solid #FF0000;
+}
+
+:enabled{
+    outline: 1px solid #00FF00;
+}
