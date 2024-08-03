@@ -42,4 +42,3 @@ print("Odgadles! Ta liczba to:", the_number)
 print("Do osiagniecia sukcesu potrzebowales tylko", tries, "prob!\n")
 
 input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
-
