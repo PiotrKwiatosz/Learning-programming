@@ -19,6 +19,14 @@ for value in (None, "Hej!"):
     try:
         print("Proba konwersji:", value, "-->", end=" ")
         print(float(value))
+    except (TypeError, ValueError):
+        print("Wystapil jakis blad!") 
+
+print()
+for value in (None, "Hej!"):
+    try:
+        print("Proba konwersji:", value, "-->", end=" ")
+        print(float(value))
     except TypeError:
         print("Mozliwa jest tylko konwersja lancucha lub liczby!")
     except ValueError:
