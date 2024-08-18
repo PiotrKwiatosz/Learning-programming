@@ -140,13 +140,36 @@ def computer_move(board, computer, human):
         # ten ruch zostal sprawdzony, wycofaj go
         board[move] = EMPTY
 
+##
+
+    # jesli plansza jest pusta, wez krawedz
+    moves_left = len(legal_moves(board))
+    if moves_left == 9:
+        move = 7
+        print(move)
+        return move
+    
+    # jesli to drugi ruch, wez srodek jesli rog jest zajety
+    # wez naroznik zaraz obok krawedzi, lub wez krawedz jesli srodek wziety
+
+    elif moves_left == 8:
+        if (0 not in legal_moves(board)) or (2 not in legal_moves(board)) or (6 not in legal_moves(board)) or (8 not in legal_moves(board)):
+            move = 4
+        elif (1 not in legal_moves(board)) or (3 not in legal_moves(board)):
+            move = 0
+        elif (5 not in legal_moves(board)) or (7 not in legal_moves(board)):
+            move =8
+        else:
+            move = 0
+        print(move)
+        return move
+        
+
     # poniewaz nikt nie moze wygrac w nastepnym ruchu, wybierz najlepsze wolne pole
     for move in BEST_MOVES:
         if move in legal_moves(board):
             print(move)
             return move
-
-##
 
 def next_turn(turn):
     """Zmien wykonawce ruchu."""
