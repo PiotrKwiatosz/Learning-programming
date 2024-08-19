@@ -163,6 +163,36 @@ def computer_move(board, computer, human):
             move = 0
         print(move)
         return move
+    
+    # jesli trzeci ruch, komputer wykonalby ruch na 7 a czlowiek wezmie kolejny
+    elif moves_left == 7:
+        if 4 not in legal_moves(board):
+            move = 0
+        else:
+            move = 4
+        print(move)
+        return move
+    
+    # jesli czwarty ruch i srodek nie jest jeszcze wziety, wez go!
+    # w przeciwnym razie, jesli oba rogi po przeciwnych stronach centralnego elementu zostalu zajete, wez strone.
+    # w przeciwnym razie postepuj zgodnie z 'najlepszymi ruchami'
+    elif moves_left == 6:
+        if 4 in legal_moves(board):
+            move = 4
+            print(move)
+            return move
+        elif (0 not in legal_moves(board)) and (4 not in legal_moves(board)) \
+             and (8 not in legal_moves(board)):
+            move = 7
+            print(move)
+            return move
+        elif (2 not in legal_moves(board)) and (4 not in legal_moves(board)) \
+             and (6 not in legal_moves(board)):
+            move = 1
+            print(move)
+            return move
+
+
         
 
     # poniewaz nikt nie moze wygrac w nastepnym ruchu, wybierz najlepsze wolne pole
