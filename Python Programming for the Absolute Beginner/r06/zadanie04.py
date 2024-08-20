@@ -191,11 +191,19 @@ def computer_move(board, computer, human):
             move = 1
             print(move)
             return move
-
-
         
+    # jesli piaty ruch i czlowiek zrobil glupi ruch (wiec oni nie probuja wygrac)
+    elif moves_left == 5:
+        if (4 not in legal_moves(board)) and (1 not in legal_moves(board)):
+            #uwaga, 7 i 0 nie beda w legal moves jesli komputer juz je wzial
+            move = 6
+        print('Uzywam piaty ruch')
+        print(move)
+        return move
+    
 
     # poniewaz nikt nie moze wygrac w nastepnym ruchu, wybierz najlepsze wolne pole
+    BEST_MOVES = (0, 2, 4, 6, 8, 1, 3, 5, 7)
     for move in BEST_MOVES:
         if move in legal_moves(board):
             print(move)
