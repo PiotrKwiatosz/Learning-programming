@@ -29,16 +29,16 @@ def next_block(the_file):
     answers = []
     for i in range (4):
         answers.append(next_line(the_file))
-
-    points = next_line(the_file)
-
+        
     correct = next_line(the_file)
     if correct:
         correct = correct[0]
 
+    points = next_line(the_file)
+
     explanation = next_line(the_file)
 
-    return category, question, answers, points, correct, explanation
+    return category, question, answers, correct, points, explanation
 
 def welcome(title):
     """Przywitaj gracza i pobierz jego nazwe."""
@@ -53,6 +53,7 @@ def main():
 
     # pobierz pierwszy blok
     category, question, answers, points, correct, explanation = next_block(trivia_file)
+
     while category:
         # zadaj pytanie
         print(category)
