@@ -29,16 +29,16 @@ def next_block(the_file):
     answers = []
     for i in range (4):
         answers.append(next_line(the_file))
-        
-    correct = next_line(the_file)
-    if correct:
-        correct = correct[0]
 
     points = next_line(the_file)
 
+    correct = next_line(the_file)
+    if correct:
+        correct = correct[0]
+   
     explanation = next_line(the_file)
 
-    return category, question, answers, correct, points, explanation
+    return category, question, answers, points, correct, explanation
 
 def welcome(title):
     """Przywitaj gracza i pobierz jego nazwe."""
@@ -71,7 +71,7 @@ def main():
             score += points
         else:
             print("\n Odpowiedz niepoprawna.", end=" ")
-        print(explanation)
+            print(explanation)
         print("Wynik:", score, "\n\n")
 
         # pobierz kolejny blok
