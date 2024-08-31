@@ -76,7 +76,7 @@ def main():
     trivia_file.close()
 
     print("To bylo ostatnie pytanie!")
-    print("Twoj koncowy wynik wynosie", score)
+    print("Twoj koncowy wynik wynosi", score)
 
 main()
 input("\n\nAby zakonczyc program, nacisnij klawisz ENTER")    
