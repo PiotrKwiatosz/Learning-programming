@@ -27,6 +27,7 @@ def next_block(the_file):
     question = next_line(the_file)
 
     answers = []
+
     for i in range (4):
         answers.append(next_line(the_file))
 
@@ -46,7 +47,7 @@ def welcome(title):
     print("\t\t", title, "\n")
 
 def main():
-    trivia_file = open_file("kwiz.txt", "r")
+    trivia_file = open_file("kwiz2.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
@@ -80,7 +81,7 @@ def main():
     trivia_file.close()
 
     print("To bylo ostatnie pytanie!")
-    print("Twoj koncowy wynik wynosie", score)
+    print("Twoj koncowy wynik wynosi", score)
 
 main()
 input("\n\nAby zakonczyc program, nacisnij klawisz ENTER")    
