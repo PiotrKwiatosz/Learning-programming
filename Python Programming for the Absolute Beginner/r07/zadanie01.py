@@ -1,5 +1,6 @@
 # Turniej wiedzy
 # Gra sprawdzajaca wiedze ogolna, odczytujaca dane ze zwyklego pliku tekstowego
+# Idynwidualna okreslona wartosc punktowa kazdego pytania
 
 import sys
 
