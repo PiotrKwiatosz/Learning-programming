@@ -1,6 +1,5 @@
-# Turniej wiedzy
-# Gra sprawdzajaca wiedze ogolna, odczytujaca dane ze zwyklego pliku tekstowego
-# Lista najlepszych wynikow
+# Zadanie 02
+# W pliku jest utrzymywana lista najlepszych wynikow. Program rejestruje nazwe gracza i jego wynik jesli miesci sie na liscie
 
 import sys
 
@@ -46,3 +45,7 @@ def welcome(title):
     """Przywitaj gracza i pobierz jego nazwe."""
     print("\t\t Witaj w turnieju wiedzy!\n")
     print("\t\t", title, "\n")
+
+def high_scores(score)
+    import pickle, shelve
+    """Zapisuje nazwe gracza i jego wynik jesli jest wystarczajaco duzy"""     
