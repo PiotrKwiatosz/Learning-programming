@@ -46,6 +46,15 @@ def welcome(title):
     print("\t\t Witaj w turnieju wiedzy!\n")
     print("\t\t", title, "\n")
 
-def high_scores(score)
+def high_scores(score):
     import pickle, shelve
-    """Zapisuje nazwe gracza i jego wynik jesli jest wystarczajaco duzy"""     
+    """Zapisuje nazwe gracza i jego wynik jesli jest wystarczajaco duzy"""
+    high_score = open("high_scores.dat", "rb")
+    high_scores = pickle.load(high_score)
+    high_score.close()
+    high_scores.sort(reverse = True)
+    win = score
+    got_a_high_score = False
+    for scores in high_scores:
+        (score, name) = scores
+        
