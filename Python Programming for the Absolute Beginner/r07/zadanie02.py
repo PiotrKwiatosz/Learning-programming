@@ -1,5 +1,6 @@
 # Zadanie 02
-# W pliku jest utrzymywana lista najlepszych wynikow. Program rejestruje nazwe gracza i jego wynik jesli miesci sie na liscie
+# W pliku jest utrzymywana lista najlepszych wynikow. 
+# Program rejestruje nazwe gracza i jego wynik jesli miesci sie na liscie
 
 import sys
 
@@ -57,4 +58,3 @@ def high_scores(score):
     got_a_high_score = False
     for scores in high_scores:
         (score, name) = scores
-        
