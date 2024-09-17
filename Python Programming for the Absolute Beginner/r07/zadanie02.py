@@ -1,6 +1,6 @@
 # Zadanie 02
 # W pliku jest utrzymywana lista najlepszych wynikow. 
-# Program rejestruje nazwe gracza i jego wynik jesli miesci sie na liscie
+# Program rejestruje nazwe gracza i jego wynik, jesli miesci sie na liscie
 
 import sys
 
@@ -58,3 +58,19 @@ def high_scores(score):
     got_a_high_score = False
     for scores in high_scores:
         (score, name) = scores
+        if win >= int(score):
+            got_a_high_score = True
+            name = input("Zdobyles wysoki wynik! Jak sie nazywasz?")
+            print("Dobra robota ", name, "! Twoj wynik to: ", win, "!", sep ="")
+            high_scores.sort()
+            high_scores.pop(0)
+            high_scores.append((win, name))
+            high_scores.sort(reverse = True)
+            high_scores = open("high_scores_pickle.dat", "wb")
+            pickle.dump(high_scores, high_score)
+            break
+    if got_a_high_score == False:
+        print("Przepraszam, nie zdobyles dostatecznie wysokiego wynikum probuj jeszcze raz!")
+    high_score.close()
+    
+
