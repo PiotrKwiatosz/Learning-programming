@@ -50,7 +50,7 @@ def welcome(title):
 def high_scores(score):
     import pickle, shelve
     """Zapisuje nazwe gracza i jego wynik jesli jest wystarczajaco duzy"""
-    high_score = open("high_scores.dat", "rb")
+    high_score = open("high_scores_pickle.dat", "rb")
     high_scores = pickle.load(high_score)
     high_score.close()
     high_scores.sort(reverse = True)
@@ -61,7 +61,7 @@ def high_scores(score):
         if win >= int(score):
             got_a_high_score = True
             name = input("Zdobyles wysoki wynik! Jak sie nazywasz?")
-            print("Dobra robota ", name, "! Twoj wynik to: ", win, "!", sep ="")
+            print("Dobra robota ", name, "! Twoj wynik to: ", win, "!", sep = "")
             high_scores.sort()
             high_scores.pop(0)
             high_scores.append((win, name))
@@ -73,4 +73,43 @@ def high_scores(score):
         print("Przepraszam, nie zdobyles dostatecznie wysokiego wynikum probuj jeszcze raz!")
     high_score.close()
     
+def main():
+    trivia_file = open_file("kwiz2.txt", "r")
+    title = next_line(trivia_file)
+    welcome(title)
+    score = 0
 
+    # pobierz pierwszy blok
+    category, question, answers, points, correct, explanation = next_block(trivia_file)
+
+    while category:
+        # zadaj pytanie
+        print(category)
+        print(question)
+        for i in range(4):
+            print("\t", i + 1, "-", answers[i])
+
+        # uzyskaj odpowiedz
+        answer = input("Jaka jest Twoja odpowiedz?: ")
+
+        # sprawdz odpowiedz
+        if answer == correct:
+            print("\nOdpowiedz prawidlowa!", end=" ")
+            points = int(points)
+            score += points
+        else:
+            print("\n Odpowiedz niepoprawna.", end=" ")
+            print(explanation)
+        print("Wynik:", score, "\n\n")
+
+        # pobierz kolejny blok
+        category, question, answers, points, correct, explanation = next_block(trivia_file)
+
+    high_scores(score)
+    trivia_file.close()
+
+    print("To bylo ostatnie pytanie!")
+    print("Twoj koncowy wynik wynosi", score)
+
+main()
+input("\n\nAby zakonczyc program, nacisnij klawisz ENTER") 
