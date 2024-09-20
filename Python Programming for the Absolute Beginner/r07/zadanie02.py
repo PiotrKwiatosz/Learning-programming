@@ -42,15 +42,10 @@ def next_block(the_file):
 
     return category, question, answers, points, correct, explanation
 
-def welcome(title):
-    """Przywitaj gracza i pobierz jego nazwe."""
-    print("\t\t Witaj w turnieju wiedzy!\n")
-    print("\t\t", title, "\n")
-
 def high_scores(score):
-    import pickle, shelve
+    import pickle
     """Zapisuje nazwe gracza i jego wynik jesli jest wystarczajaco duzy"""
-    high_score = open("high_scores_pickle.dat", "rb")
+    high_score = open_file("high_scores_pickle.dat", "rb")
     high_scores = pickle.load(high_score)
     high_score.close()
     high_scores.sort(reverse = True)
@@ -73,6 +68,11 @@ def high_scores(score):
         print("Przepraszam, nie zdobyles dostatecznie wysokiego wynikum probuj jeszcze raz!")
     high_score.close()
     
+def welcome(title):
+    """Przywitaj gracza i pobierz jego nazwe."""
+    print("\t\t Witaj w turnieju wiedzy!\n")
+    print("\t\t", title, "\n")
+
 def main():
     trivia_file = open_file("kwiz2.txt", "r")
     title = next_line(trivia_file)
@@ -99,13 +99,14 @@ def main():
             score += points
         else:
             print("\n Odpowiedz niepoprawna.", end=" ")
-            print(explanation)
+        print(explanation)
         print("Wynik:", score, "\n\n")
 
         # pobierz kolejny blok
         category, question, answers, points, correct, explanation = next_block(trivia_file)
 
     high_scores(score)
+
     trivia_file.close()
 
     print("To bylo ostatnie pytanie!")
