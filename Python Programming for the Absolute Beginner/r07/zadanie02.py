@@ -43,14 +43,12 @@ def next_block(the_file):
     return category, question, answers, points, correct, explanation
 
 def high_scores(score):
-    import pickle
+    import pickle, shelve
     """Zapisuje nazwe gracza i jego wynik jesli jest wystarczajaco duzy"""
-    high_score = open_file("high_scores_pickle.dat", "rb")
-    high_scores = pickle.load(high_score)
-    high_score.close()
-    high_scores.sort(reverse = True)
+    print("Zapisywanie wysokich wynikow")
+
     win = score
-    got_a_high_score = False
+
     for scores in high_scores:
         (score, name) = scores
         if win >= int(score):
@@ -66,8 +64,15 @@ def high_scores(score):
             break
     if got_a_high_score == False:
         print("Przepraszam, nie zdobyles dostatecznie wysokiego wynikum probuj jeszcze raz!")
+
+    f = open("high_scores_pickle.dat", "wb")
+    high_score = open_file("high_scores_pickle.dat", "rb")
+    high_scores = pickle.load(high_scores)
     high_score.close()
-    
+    high_scores.sort(reverse = True)
+    got_a_high_score = False
+    high_score.close()
+
 def welcome(title):
     """Przywitaj gracza i pobierz jego nazwe."""
     print("\t\t Witaj w turnieju wiedzy!\n")
