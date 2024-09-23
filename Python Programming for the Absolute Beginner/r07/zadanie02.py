@@ -28,21 +28,21 @@ def next_block(the_file):
     question = next_line(the_file)
 
     answers = []
+    score_list = []
 
     for i in range (4):
         answers.append(next_line(the_file))
-
-    points = next_line(the_file)
-
-    correct = next_line(the_file)
-    if correct:
-        correct = correct[0]
+        try:
+            score_list.append(next_line(the_file))
+        except:
+            break
    
     explanation = next_line(the_file)
 
-    return category, question, answers, points, correct, explanation
+    return category, question, answers, score_list, correct, explanation
 
-def high_scores(score):
+##
+#  def high_scores(score):
     import pickle, shelve
     """Zapisuje nazwe gracza i jego wynik jesli jest wystarczajaco duzy"""
     print("Zapisywanie wysokich wynikow")
@@ -72,6 +72,7 @@ def high_scores(score):
     high_scores.sort(reverse = True)
     got_a_high_score = False
     high_score.close()
+    ##
 
 def welcome(title):
     """Przywitaj gracza i pobierz jego nazwe."""
@@ -106,6 +107,9 @@ def main():
             print("\n Odpowiedz niepoprawna.", end=" ")
         print(explanation)
         print("Wynik:", score, "\n\n")
+
+        # przechowuj wyniki
+        score = score + score_list[int(answer) - 1]
 
         # pobierz kolejny blok
         category, question, answers, points, correct, explanation = next_block(trivia_file)
