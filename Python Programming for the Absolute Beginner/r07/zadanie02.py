@@ -1,4 +1,5 @@
-# Zadanie 02
+# Zadanie 02 ver. 1.6
+
 # W pliku jest utrzymywana lista najlepszych wynikow. 
 # Program rejestruje nazwe gracza i jego wynik, jesli miesci sie na liscie
 
@@ -30,11 +31,10 @@ def next_block(the_file):
 
     answers = []
     score_list = []
-
     for i in range (4):
         answers.append(next_line(the_file))
         try:
-            score_list.append(next_line(the_file))
+            score_list.append(int(next_line(the_file)))
         except:
             break
    
@@ -48,14 +48,13 @@ def welcome(title):
     print("\t\t", title, "\n")
 
 def main():
-    trivia_file = open_file("kwiz2.txt", "r")
+    trivia_file = open_file("kwiz3.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
 
     # pobierz pierwszy blok
-    category, question, answers, score_list, points, correct, explanation = next_block(trivia_file)
-
+    category, question, answers, score_list, explanation = next_block(trivia_file)
     while category:
         # zadaj pytanie
         print(category)
@@ -65,22 +64,25 @@ def main():
 
         # uzyskaj odpowiedz
         answer = input("Jaka jest Twoja odpowiedz?: ")
+        # przechowuj wyniki
+        score = score + score_list[int(answer)-1]
+
+        print(explanation)
 
         # sprawdz odpowiedz
-        if answer == correct:
-            print("\nOdpowiedz prawidlowa!", end=" ")
-            points = int(points)
-            score += points
-        else:
-            print("\n Odpowiedz niepoprawna.", end=" ")
-        print(explanation)
-        print("Wynik:", score, "\n\n")
+        #if answer == correct:
+        #    print("\nOdpowiedz prawidlowa!", end=" ")
+        #     points = int(points)
+        #    score += points
+        #else:
+        #    print("\n Odpowiedz niepoprawna.", end=" ")
+        #print(explanation)
+        #print("Wynik:", score, "\n\n")
 
-        # przechowuj wyniki
-        score = score + score_list[int(answer) - 1]
+
 
         # pobierz kolejny blok
-        category, question, answers, score_list, points, correct, explanation = next_block(trivia_file)
+        category, question, answers, score_list, explanation = next_block(trivia_file)
 
     trivia_file.close()
 
