@@ -31,7 +31,7 @@ def next_block(the_file):
 
     answers = []
     score_list = []
-    for i in range (4):
+    for i in range(4):
         answers.append(next_line(the_file))
         try:
             score_list.append(int(next_line(the_file)))
@@ -44,11 +44,11 @@ def next_block(the_file):
 
 def welcome(title):
     """Przywitaj gracza i pobierz jego nazwe."""
-    print("\t\t Witaj w turnieju wiedzy!\n")
+    print("\t\tWitaj w turnieju wiedzy!\n")
     print("\t\t", title, "\n")
 
 def main():
-    trivia_file = open_file("kwiz3.txt", "r")
+    trivia_file = open_file("kwiz3bkp.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
@@ -64,25 +64,23 @@ def main():
 
         # uzyskaj odpowiedz
         answer = input("Jaka jest Twoja odpowiedz?: ")
-        # przechowuj wyniki
-        score = score + score_list[int(answer)-1]
-
-        print(explanation)
 
         # sprawdz odpowiedz
-        #if answer == correct:
-        #    print("\nOdpowiedz prawidlowa!", end=" ")
-        #     points = int(points)
-        #    score += points
-        #else:
-        #    print("\n Odpowiedz niepoprawna.", end=" ")
-        #print(explanation)
-        #print("Wynik:", score, "\n\n")
+        if answer == correct:
+            print("\nOdpowiedz prawidlowa!", end=" ")
+            points = int(points)
+            score += points
+        else:
+            print("\n Odpowiedz niepoprawna.", end=" ")
+        print(explanation)
+        print("Wynik:", score, "\n\n")
 
-
-
+        # przechowuj wyniki
+        score = score + score_list[int(answer)-1]
+        print(explanation)
+        
         # pobierz kolejny blok
-        category, question, answers, score_list, explanation = next_block(trivia_file)
+        category, question, answers, correct, score_list, explanation = next_block(trivia_file)
 
     trivia_file.close()
 
