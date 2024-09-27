@@ -68,8 +68,9 @@ def main():
         # sprawdz odpowiedz
         if answer == correct:
             print("\nOdpowiedz prawidlowa!", end=" ")
-            points = int(points)
             score += points
+            points = int(points)
+
         else:
             print("\n Odpowiedz niepoprawna.", end=" ")
         print(explanation)
@@ -81,6 +82,8 @@ def main():
         
         # pobierz kolejny blok
         category, question, answers, correct, score_list, explanation = next_block(trivia_file)
+
+    high_scores(score)
 
     trivia_file.close()
 
