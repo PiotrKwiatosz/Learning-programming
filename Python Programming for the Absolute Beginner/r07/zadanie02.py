@@ -65,25 +65,12 @@ def main():
         # uzyskaj odpowiedz
         answer = input("Jaka jest Twoja odpowiedz?: ")
 
-        # sprawdz odpowiedz
-        if answer == correct:
-            print("\nOdpowiedz prawidlowa!", end=" ")
-            score += points
-            points = int(points)
-
-        else:
-            print("\n Odpowiedz niepoprawna.", end=" ")
-        print(explanation)
-        print("Wynik:", score, "\n\n")
 
         # przechowuj wyniki
         score = score + score_list[int(answer)-1]
         print(explanation)
-        
         # pobierz kolejny blok
-        category, question, answers, correct, score_list, explanation = next_block(trivia_file)
-
-    high_scores(score)
+        category, question, answers, score_list, explanation = next_block(trivia_file)
 
     trivia_file.close()
 
@@ -93,4 +80,4 @@ def main():
     high_scores(score)
 
 main()
-input("\n\nAby zakonczyc program, nacisnij klawisz ENTER") 
+input("\n\nAby zakonczyc program, nacisnij klawisz ENTER.")
