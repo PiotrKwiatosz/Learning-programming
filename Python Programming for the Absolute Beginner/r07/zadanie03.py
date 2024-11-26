@@ -3,15 +3,13 @@
 
 import sys
 
-##
-
 def open_file(file_name, mode):
     """Open a file."""
     try:
         the_file = open(file_name, mode)
     except IOError as e:
-        print("Unable to open the file", file_name, "Ending program.\n", e)
-        input("\n\nPress the enter key to exit.")
+        print("Nie można otworzyc pliku", file_name, "Konczenie programu.\n", e)
+        input("\n\nNacisnij ENTER aby wyjsc.")
         sys.exit()
     else:
         return the_file
@@ -66,8 +64,8 @@ def high_scores(score):
     for scores in high_scores:
         scores = (score, name)
         if win > int(score): # only if got a high score does the score get entered
-            name = input("You've got a high score! What's your name? ")
-            print("Well done ", name, "! Your score is: ", win, "!", sep = "")
+            name = input("Zdobyles punkty! Jakie jest Twoje imie? ")
+            print("Super! ", name, "! Your score is: ", win, "!", sep = "")
             high_scores.append((win, name))
             high_scores.pop(0)
             high_scores.sort(reverse = True) # ensure highscores in correct order
@@ -81,11 +79,11 @@ def high_scores(score):
                 high_score.write('\n')
             break
         else:
-            print("Sorry, you didn't get a high score, better luck next time!")
+            print("Przepraszam, nie poszlo Ci dobrze, sprobuj jeszcze raz!")
     high_score.close()
 
 def main():
-    trivia_file = open_file("trivia_file2.txt", "r")
+    trivia_file = open_file("kwiz3bkp.txt", "r")
     title = next_line(trivia_file)
     welcome(title)
     score = 0
@@ -99,16 +97,16 @@ def main():
         for i in range(4):
             print("\t", i + 1, "-", answers[i])
         # get an answer
-        answer = input("What's your answer?: ")
+        answer = input("Jaka jest Twoja odpowiedz?: ")
         # check answer
         if answer == correct:
-            print("\nRight!", end=" ")
+            print("\nDobra!", end=" ")
             points = int(points)
             score += points
         else:
-            print("\nWrong.", end=" ")
+            print("\nZla...", end=" ")
         print(explanation)
-        print("Score:", score, "\n\n")
+        print("Wynik:", score, "\n\n")
     
 
         # get next block
@@ -117,9 +115,7 @@ def main():
     high_scores(score)
     trivia_file.close()
 
-    print("That was the last question!")
-    print("You're final score is", score)
+    print("To bylo ostatnie pytanie!")
+    print("Twoj koncowy wynik: ", score)
 
 main()
-
-##
